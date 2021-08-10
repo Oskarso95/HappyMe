@@ -4,12 +4,13 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
+using EPiServer.Web;
 
 namespace EpiserverSite.Models.ViewModels
 {
     public class LayoutModel
     {
-        public string SiteTitle { get; set; }
+        [UIHint(UIHint.Image)] public ContentReference SiteImage { get; set; }
         public XhtmlString OpeningHours { get; set; }
 
         public XhtmlString Address { get; set; }

@@ -32,6 +32,7 @@ namespace EpiserverSite.Business
         {
             var startPageContentLink = SiteDefinition.Current.StartPage;
 
+
             if (currentContentLink.CompareToIgnoreWorkID(startPageContentLink))
             {
                 startPageContentLink = currentContentLink;
@@ -41,9 +42,7 @@ namespace EpiserverSite.Business
 
             return new LayoutModel
             {
-                SiteTitle = startPage.SiteTitle,
-                Address = startPage.Address,
-                OpeningHours = startPage.OpeningHours,
+                SiteImage = startPage.SiteImage,
                 PageLinks = startPage.PageLinks
             };
         }

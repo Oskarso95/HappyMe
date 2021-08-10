@@ -1,0 +1,29 @@
+.header-image{
+    height: 100px;
+    width: auto;
+}
+
+.menu-items{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    .active{
+        .menu-item__link{
+            font-weight: bold;
+        }
+    }
+    .menu-item{
+        color: black;
+        padding: 0 40px;
+        text-decoration: none;
+        .menu-item__link{
+            cursor: pointer;
+            color: black;
+            font-size: 24px;
+            text-decoration: none;
+            &:visited{
+                color: black;
+            }
+        }
+    }
+}

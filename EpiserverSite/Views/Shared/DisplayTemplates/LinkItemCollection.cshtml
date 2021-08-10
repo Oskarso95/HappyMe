@@ -1,11 +1,11 @@
 ﻿@using EPiServer.Web.Routing
 @model EPiServer.SpecializedProperties.LinkItemCollection
 
-<ul class="list-group">
+<ul class="footer-links d-flex flex-row justify-content-around w-100">
     @foreach (var link in Model)
     {
-        <li class="list-group-item">
-            <a href="@UrlResolver.Current.GetUrl(link.Href)">
+        <li class="footer-link">
+            <a class="footer-link__item" href="@UrlResolver.Current.GetUrl(link.Href)">
                 @link.Text
             </a>
         </li>

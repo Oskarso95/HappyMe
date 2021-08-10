@@ -2,15 +2,7 @@
 @model IPageViewModel<SitePageData>
 
 <footer>
-    <div class="row">
-        <div class="col text-center">
-            @Html.PropertyFor(x => x.Layout.Address)
-        </div>
-        <div class="col text-center">
-            @Html.PropertyFor(x => x.Layout.OpeningHours)
-        </div>
-        <div class="col">
-            @Html.PropertyFor(x => x.Layout.PageLinks)
-        </div>
+    <div class="d-flex justify-content-around align-items-center flex-column">
+        @Html.PropertyFor(x => x.Layout.PageLinks)
     </div>
 </footer>

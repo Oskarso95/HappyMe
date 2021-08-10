@@ -1,0 +1,14 @@
+@import "variables";
+footer{
+    background-color:$footer-bg-color;
+    .footer-links{
+        list-style-type: none;
+        .footer-link{
+            
+            .footer-link__item{
+                color: $footer-link-color;
+                text-decoration: none;
+            }
+        }
+    }
+}

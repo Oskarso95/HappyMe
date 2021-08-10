@@ -3,10 +3,11 @@
 @using EPiServer.Web
 @using EPiServer.Editor
 @using EpiserverSite.Helpers
+@using ImageProcessor.Web.Episerver
 @model IPageViewModel<SitePageData>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    @*<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">@Model.Layout.SiteTitle</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +28,6 @@
                                     {
                                         <li>
                                             <a href="@child.Link" class="dropdown-item">@child.Name</a>
-
                                         </li>
                                     }
                                 </ul>
@@ -44,6 +44,39 @@
                     }
 
                 </ul>
+            </div>
+        </div>
+    </nav>*@
+
+    <nav class="d-flex flex-column">
+        <div class="w-100 d-flex align-items-center justify-content-center">
+            @if (Model.Layout.SiteImage != null)
+            {
+                <a href="/">
+                    <img class="header-image" src="@(Html.ProcessImage(Url.Content(Url.ContentUrl(Model.Layout.SiteImage))).ResizeCrop(null, 100, null, null))"/>
+                </a>
+            }
+        </div>
+        <div class="d-flex justify-content-around align-items-center flex-row w-100">
+            <div class="search-container d-flex align-items-center justify-content-center">
+                <a class="text-dark">
+                    <i class="fas fa-search fa-2x"></i>
+                </a>
+            </div>
+            <div class="nav-links-container justify-content-center align-items-center flex-row">
+                <ul class="menu-items d-flex flex-row justify-content-around align-items-center">
+                    @foreach (var item in Model.NavItems)
+                    {
+                        <li class="menu-item @(item.Active ? "active" : "")">
+                            <a class="menu-item__link" href="@item.Link">@item.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="shopping-cart-container justify-content-center align-items-center">
+                <a class="text-dark">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                </a>
             </div>
         </div>
     </nav>

@@ -4,6 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
+using EPiServer.Web;
 
 namespace EpiserverSite.Models.Pages
 {
@@ -23,23 +24,7 @@ namespace EpiserverSite.Models.Pages
 
         [CultureSpecific]
         [Display(
-            Name = "Opening hours",
-            Description = "Displays opening hours in the footer",
-            GroupName = Global.GroupNames.SiteSettings,
-            Order = 100)]
-        public virtual XhtmlString OpeningHours { get; set; }
-
-        [CultureSpecific]
-        [Display(
-            Name = "Address",
-            Description = "The address will be shown in the footer",
-            GroupName = Global.GroupNames.SiteSettings,
-            Order = 200)]
-        public virtual XhtmlString Address { get; set; }
-
-        [CultureSpecific]
-        [Display(
-            Name = "Pagelinks",
+            Name = "Page links",
             Description = "Links to pages shown in footer",
             GroupName = Global.GroupNames.SiteSettings,
             Order = 300)]
@@ -47,10 +32,11 @@ namespace EpiserverSite.Models.Pages
 
         [CultureSpecific]
         [Display(
-            Name = "Site title",
-            Description = "Title displayed in navbar",
+            Name = "Site image",
+            Description = "Image displayed in header",
             GroupName = Global.GroupNames.SiteSettings,
             Order = 400)]
-        public virtual string SiteTitle { get; set; }
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference SiteImage { get; set; }
     }
 }
