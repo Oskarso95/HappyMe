@@ -1,0 +1,21 @@
+﻿@model EpiserverSite.Models.ViewModels.PreviewModel
+
+@foreach (var area in Model.Areas)
+{
+    if (area.Supported)
+    {
+        <div class="row">
+            <div class="@area.AreaTag">
+                <h3 class="text-primary my-2">@area.AreaName </h3>
+            </div>
+        </div>
+        <div class="row">
+            @Html.DisplayFor(x => area.ContentArea, new {Tag = area.AreaTag})
+        </div>
+    }
+}
+
+@if (!Model.Areas.Any())
+{
+    <h1 class="text-danger">@Model.PreviewContent.Name</h1>
+}

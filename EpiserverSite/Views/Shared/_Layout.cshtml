@@ -1,0 +1,48 @@
+﻿@using EPiServer.Shell
+@model EpiserverSite.Models.IPageViewModel<EpiserverSite.Models.SitePageData>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/build/site.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+    @{
+        Html.RenderPartial("_Header", Model);
+    }
+
+    @{
+        var bgImage = string.Format("style=background-image:url({0})", Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage)));
+
+    }
+
+    <div class="bg-light p-5 rounded-lg m-3" @bgImage>
+        <div class="container-fluid text-white" style="min-height: 700px">
+            <div class="row">
+                @Html.Partial("_Breadcrumbs", Model)
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <h1 class="display-4">@Html.PropertyFor(x => x.CurrentPage.Headline)</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    @Html.PropertyFor(x => x.CurrentPage.Ingress)
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <hr/>
+    @{
+        Html.RenderPartial("_Footer", Model);
+    }
+</div>
+<script src="~/build/index.js"></script>
+</body>
+</html>

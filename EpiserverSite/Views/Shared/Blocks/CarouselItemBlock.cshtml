@@ -1,0 +1,16 @@
+﻿@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.Blocks.CarouselItemBlock
+
+
+<div class="carousel-item @(ViewData["index"] as int? == 0 ? "active" : "")">
+
+    @if (Model.Image != null)
+    {
+        <img src="@Html.ProcessImage(Url.Content(Url.ContentUrl(Model.Image))).ResizeCrop(1200, 600, null, null)" alt="@Model.Headline" class="d-block w-100"/>
+    }
+    <div class="carousel-caption d-none d-md-block">
+        <h5 @Html.EditAttributes(x => x.Headline) class="display-4">@Model.Headline</h5>
+        <p @Html.EditAttributes(x => x.TextContent) class="lead">@Model.TextContent</p>
+        <a class="btn btn-outline-primary" href="@Model.ButtonLink.Uri">@Model.ButtonText</a>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@model EpiserverSite.Models.IPageViewModel<EpiserverSite.Models.SitePageData>
+
+@if (Model.Breadcrumbs != null)
+{
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            @foreach (var item in Model.Breadcrumbs)
+            {
+                <li class="breadcrumb-item @(item.Active ? "active" : "")">
+                    @if (item.Active)
+                    {
+                        @item.Name
+                    }
+                    else
+                    {
+                        <a href="@item.Link" class="text-white"> @item.Name </a>
+                    }
+
+                </li>
+            }
+        </ol>
+    </nav>
+}

@@ -1,0 +1,50 @@
+﻿@using EpiserverSite.Models
+@using EPiServer.Core
+@using EPiServer.Web
+@using EPiServer.Editor
+@using EpiserverSite.Helpers
+@model IPageViewModel<SitePageData>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">@Model.Layout.SiteTitle</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    @foreach (var navItem in Model.NavItems)
+                    {
+                        if (navItem.Children.Any())
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="@navItem.Link" id="@navItem.Name" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    @navItem.Name
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="@navItem.Name">
+                                    @foreach (var child in navItem.Children)
+                                    {
+                                        <li>
+                                            <a href="@child.Link" class="dropdown-item">@child.Name</a>
+
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item @(navItem.Active ? "active" : "")">
+                                <a href="@navItem.Link" class="nav-link">
+                                    @navItem.Name
+                                </a>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

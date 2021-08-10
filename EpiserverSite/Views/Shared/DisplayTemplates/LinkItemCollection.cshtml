@@ -1,0 +1,13 @@
+﻿@using EPiServer.Web.Routing
+@model EPiServer.SpecializedProperties.LinkItemCollection
+
+<ul class="list-group">
+    @foreach (var link in Model)
+    {
+        <li class="list-group-item">
+            <a href="@UrlResolver.Current.GetUrl(link.Href)">
+                @link.Text
+            </a>
+        </li>
+    }
+</ul>
