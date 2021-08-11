@@ -10794,6 +10794,9 @@ textarea.form-control-lg {
 footer {
   background-color: #595959;
 }
+footer .footer-usp-container {
+  background-color: #EAF6FD;
+}
 footer .footer-links {
   list-style-type: none;
 }

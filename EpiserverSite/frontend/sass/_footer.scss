@@ -1,6 +1,10 @@
 @import "variables";
 footer{
     background-color:$footer-bg-color;
+    
+    .footer-usp-container{
+        background-color: $ooter-usps-bg-color;
+    }
     .footer-links{
         list-style-type: none;
         .footer-link{
@@ -11,7 +15,6 @@ footer{
             }
         }
     }
-
     .contact-details{
         ul{
 

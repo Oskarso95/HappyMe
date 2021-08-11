@@ -2,14 +2,12 @@
 @model IPageViewModel<SitePageData>
 
 <footer>
-    <div class="d-flex w-100">
-        <p>Ingen bindningstid</p>
-
-        <p>Rett hjem i postkassen</p>
-
-        <p>20% familjerabatt</p>
-
-
+    <div class="d-flex w-100 footer-usp-container">
+        <ul>
+            @if (Model.Layout.FooterUSPs != null)
+            {
+            }
+        </ul>
     </div>
     <div class="d-flex justify-content-around align-items-center flex-column">
         @Html.PropertyFor(x => x.Layout.PageLinks)
