@@ -14,29 +14,6 @@
         Html.RenderPartial("_Header", Model);
     }
 
-    @{
-        var bgImage = string.Format("style=background-image:url({0})", Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage)));
-
-    }
-
-    <div class="bg-light p-5 rounded-lg m-3" @bgImage>
-        <div class="container-fluid text-white" style="min-height: 700px">
-            <div class="row">
-                @Html.Partial("_Breadcrumbs", Model)
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <h1 class="display-4">@Html.PropertyFor(x => x.CurrentPage.Headline)</h1>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-8">
-                    @Html.PropertyFor(x => x.CurrentPage.Ingress)
-                </div>
-            </div>
-        </div>
-    </div>
     @RenderBody()
     <hr/>
     @{

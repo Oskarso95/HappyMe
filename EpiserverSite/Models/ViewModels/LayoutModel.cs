@@ -11,10 +11,13 @@ namespace EpiserverSite.Models.ViewModels
     public class LayoutModel
     {
         [UIHint(UIHint.Image)] public ContentReference SiteImage { get; set; }
-        public XhtmlString OpeningHours { get; set; }
-
-        public XhtmlString Address { get; set; }
 
         public LinkItemCollection PageLinks { get; set; }
+
+        public LinkItemCollection FooterIconLinks { get; set; }
+
+        public XhtmlString ContactDetails { get; set; }
+
+        public ContentReference FooterUSPs { get; set; }
     }
 }

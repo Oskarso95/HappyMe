@@ -43,7 +43,9 @@ namespace EpiserverSite.Business
             return new LayoutModel
             {
                 SiteImage = startPage.SiteImage,
-                PageLinks = startPage.PageLinks
+                PageLinks = startPage.PageLinks,
+                ContactDetails = startPage.ContactDetails,
+                FooterUSPs = startPage.FooterUSPs,
             };
         }
     }

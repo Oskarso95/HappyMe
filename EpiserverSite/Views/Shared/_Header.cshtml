@@ -6,54 +6,17 @@
 @using ImageProcessor.Web.Episerver
 @model IPageViewModel<SitePageData>
 
-<header>
-    @*<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">@Model.Layout.SiteTitle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    @foreach (var navItem in Model.NavItems)
-                    {
-                        if (navItem.Children.Any())
-                        {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="@navItem.Link" id="@navItem.Name" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    @navItem.Name
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="@navItem.Name">
-                                    @foreach (var child in navItem.Children)
-                                    {
-                                        <li>
-                                            <a href="@child.Link" class="dropdown-item">@child.Name</a>
-                                        </li>
-                                    }
-                                </ul>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item @(navItem.Active ? "active" : "")">
-                                <a href="@navItem.Link" class="nav-link">
-                                    @navItem.Name
-                                </a>
-                            </li>
-                        }
-                    }
+@{
+    var bgImage = string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))));
 
-                </ul>
-            </div>
-        </div>
-    </nav>*@
-
-    <nav class="d-flex flex-column">
+}
+<header class="bg-image" @bgImage>
+    <nav class="d-flex flex-column bg-transparent text-white @(Model.CurrentPage.BackgroundImage != null ? "bg-blurred" : "")">
         <div class="w-100 d-flex align-items-center justify-content-center">
             @if (Model.Layout.SiteImage != null)
             {
                 <a href="/">
-                    <img class="header-image" src="@(Html.ProcessImage(Url.Content(Url.ContentUrl(Model.Layout.SiteImage))).ResizeCrop(null, 100, null, null))"/>
+                    <img class="header-logo" src="@(Html.ProcessImage(Url.Content(Url.ContentUrl(Model.Layout.SiteImage))).ResizeCrop(null, 100, null, null))"/>
                 </a>
             }
         </div>
@@ -80,4 +43,23 @@
             </div>
         </div>
     </nav>
+
+    <div class="bg-light p-5 rounded-lg m-3 bg-transparent">
+        <div class="container-fluid text-white" style="min-height: 700px">
+            <div class="row">
+                @Html.Partial("_Breadcrumbs", Model)
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <h1 class="display-4">@Html.PropertyFor(x => x.CurrentPage.Headline)</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    @Html.PropertyFor(x => x.CurrentPage.Ingress)
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

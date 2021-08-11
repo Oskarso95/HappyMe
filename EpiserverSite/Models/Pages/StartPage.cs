@@ -19,7 +19,47 @@ namespace EpiserverSite.Models.Pages
                 "The main content area will be shown in the middle of the page.",
             GroupName = SystemTabNames.Content,
             Order = 100)]
-        public virtual ContentArea MainContentArea { get; set; }
+        public virtual ContentArea FirstContentArea { get; set; }
+
+
+        [CultureSpecific]
+        [Display(
+            Name = "Main content",
+            Description =
+                "The main content area will be shown in the middle of the page.",
+            GroupName = SystemTabNames.Content,
+            Order = 200)]
+        public virtual ContentArea SecondContentArea { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Main content",
+            Description =
+                "The main content area will be shown in the middle of the page.",
+            GroupName = SystemTabNames.Content,
+            Order = 300)]
+        public virtual ContentArea ThirdContentArea { get; set; }
+
+        //header content
+        [CultureSpecific]
+        [Display(
+            Name = "Site image",
+            Description = "Image displayed in header",
+            GroupName = Global.GroupNames.SiteSettings,
+            Order = 100)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference SiteImage { get; set; }
+
+        //footer content
+
+        [CultureSpecific]
+        [Display(
+            Name = "Footer USPS",
+            Description = "USPs in footer",
+            GroupName = Global.GroupNames.SiteSettings,
+            Order = 200)]
+        [AllowedTypes(typeof(ProductPage))]
+        public virtual ContentReference FooterUSPs { get; set; }
 
 
         [CultureSpecific]
@@ -32,11 +72,10 @@ namespace EpiserverSite.Models.Pages
 
         [CultureSpecific]
         [Display(
-            Name = "Site image",
-            Description = "Image displayed in header",
+            Name = "Page links",
+            Description = "Links to pages shown in footer",
             GroupName = Global.GroupNames.SiteSettings,
             Order = 400)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference SiteImage { get; set; }
+        public virtual XhtmlString ContactDetails { get; set; }
     }
 }
