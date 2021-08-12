@@ -4,7 +4,9 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.UI.WebControls;
 using EPiServer.Web;
+using EpiserverSite.Models.Blocks;
 
 namespace EpiserverSite.Models.Pages
 {
@@ -12,33 +14,44 @@ namespace EpiserverSite.Models.Pages
         Description = "StartPage of EpiserverSite")]
     public class StartPage : SitePageData
     {
+        //[CultureSpecific]
+        //[Display(
+        //    Name = "Background image",
+        //    Description =
+        //        "Large background image displayed on the startpage.",
+        //    GroupName = SystemTabNames.Content,
+        //    Order = 100)]
+        //[UIHint(UIHint.Image)]
+        //public virtual ContentReference BackgroundImage { get; set; }
+
         [CultureSpecific]
         [Display(
-            Name = "Main content",
+            Name = "Right content",
             Description =
-                "The main content area will be shown in the middle of the page.",
-            GroupName = SystemTabNames.Content,
-            Order = 100)]
-        public virtual ContentArea FirstContentArea { get; set; }
-
-
-        [CultureSpecific]
-        [Display(
-            Name = "Main content",
-            Description =
-                "The main content area will be shown in the middle of the page.",
+                "The content area will be shown on the right side of the page.",
             GroupName = SystemTabNames.Content,
             Order = 200)]
-        public virtual ContentArea SecondContentArea { get; set; }
+        [AllowedTypes(typeof(QuickBuyBlock), typeof(TextImageBlock))]
+        public virtual ContentArea RightContentArea { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Main content",
+            Name = "Left content",
             Description =
-                "The main content area will be shown in the middle of the page.",
+                "The content area will be shown on the right side of the page.",
             GroupName = SystemTabNames.Content,
             Order = 300)]
-        public virtual ContentArea ThirdContentArea { get; set; }
+        [AllowedTypes(typeof(QuickBuyBlock), typeof(TextImageBlock))]
+        public virtual ContentArea LeftContentArea { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Content area",
+            Description =
+                "The content area will be shown in the middle of the page.",
+            GroupName = SystemTabNames.Content,
+            Order = 400)]
+        public virtual ContentArea ContentArea { get; set; }
 
         //header content
         [CultureSpecific]

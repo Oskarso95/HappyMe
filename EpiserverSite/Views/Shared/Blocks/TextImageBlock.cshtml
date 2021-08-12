@@ -1,0 +1,23 @@
+﻿@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.Blocks.TextImageBlock
+
+@{
+    var bgImage = Model.BackgroundImage != null ? String.Format("style=background-image: url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.BackgroundImage))).ResizeCrop(1000, null, null, null)) : "";
+}
+
+<div class="block-body" @bgImage>
+    @if (Model.Image != null)
+    {
+        <img src="@(Html.ProcessImage(Url.Content(Url.ContentUrl(Model.Image))).ResizeCrop(600, null, null, null))"/>
+    }
+
+    @if (!String.IsNullOrWhiteSpace(Model.Heading))
+    {
+        <h1 @Html.EditAttributes(x => x.Heading)>@Model.Heading</h1>
+    }
+
+    @if (Model.TextContent != null)
+    {
+        @Html.PropertyFor(x => x.TextContent)
+    }
+</div>

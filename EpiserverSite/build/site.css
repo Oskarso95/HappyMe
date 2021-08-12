@@ -10766,6 +10766,7 @@ textarea.form-control-lg {
 .bg-image {
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 }
 
 .menu-items {
@@ -10818,4 +10819,20 @@ footer .contact-details ul li {
 
 .bg-blurred {
   background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.textimageblock {
+  color: white !important;
+}
+.textimageblock h1, .textimageblock .h1 {
+  font-size: 78px;
+}
+.textimageblock h2, .textimageblock .h2 {
+  font-size: 36px;
+}
+.textimageblock h3, .textimageblock .h3 {
+  font-size: 30px;
+}
+.textimageblock p {
+  font-size: 20px;
 }

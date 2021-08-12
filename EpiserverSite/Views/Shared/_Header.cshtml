@@ -6,11 +6,8 @@
 @using ImageProcessor.Web.Episerver
 @model IPageViewModel<SitePageData>
 
-@{
-    var bgImage = string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).Resize(1920, null));
 
-}
-<header class="bg-image" @bgImage>
+<header class="bg-image">
     <nav class="d-flex flex-column bg-transparent text-white @(Model.CurrentPage.BackgroundImage != null ? "bg-blurred" : "")">
         <div class="w-100 d-flex align-items-center justify-content-center">
             @if (Model.Layout.SiteImage != null)
@@ -44,7 +41,7 @@
         </div>
     </nav>
 
-    <div class="bg-light p-5 rounded-lg m-3 bg-transparent">
+    @*<div class="bg-light p-5 rounded-lg m-3 bg-transparent">
         <div class="container-fluid text-white" style="min-height: 700px">
             <div class="row">
                 @Html.Partial("_Breadcrumbs", Model)
@@ -61,5 +58,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>*@
 </header>

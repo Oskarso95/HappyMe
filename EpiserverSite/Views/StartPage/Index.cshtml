@@ -1,23 +1,29 @@
 ﻿@using EpiserverSite.Models.Pages
 @using EpiserverSite;
+@using ImageProcessor.Web.Episerver
 @model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.StartPage>
 
+@{
+    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).Resize(1920, null)) : "";
+}
+<div class="w-100 bg-image" @bgImage>
+    <div class="row">
+        @Html.PropertyFor(x => x.CurrentPage.RightContentArea, new
+        {
+            CssClass = "w-50 justify-content-center d-flex",
+            Tag = Global.ContentAreaTags.HalfWidth
+        })
 
-@Html.PropertyFor(x => x.CurrentPage.FirstContentArea, new
-{
-    CssClass = "row",
-    Tag = Global.ContentAreaTags.HalfWidth
-})
 
-
-@Html.PropertyFor(x => x.CurrentPage.SecondContentArea, new
-{
-    CssClass = "row",
-    Tag = Global.ContentAreaTags.HalfWidth
-})
-
-@Html.PropertyFor(x => x.CurrentPage.ThirdContentArea, new
-{
-    CssClass = "row",
-    Tag = Global.ContentAreaTags.HalfWidth
-})
+        @Html.PropertyFor(x => x.CurrentPage.LeftContentArea, new
+        {
+            CssClass = "w-50 justify-content-center d-flex",
+            Tag = Global.ContentAreaTags.HalfWidth
+        })
+    </div>
+    @Html.PropertyFor(x => x.CurrentPage.ContentArea, new
+    {
+        CssClass = "row",
+        Tag = Global.ContentAreaTags.FullWidth
+    })
+</div>
