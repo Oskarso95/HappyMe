@@ -330,6 +330,7 @@
     <None Include="Views\Shared\Blocks\TeaserBlock.cshtml" />
     <None Include="Views\Shared\Blocks\TextImageBlock.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\LinkItemCollection.cshtml" />
+    <None Include="Views\Shared\PagePartials\ArticlePage.cshtml" />
     <None Include="Views\Shared\_Breadcrumbs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

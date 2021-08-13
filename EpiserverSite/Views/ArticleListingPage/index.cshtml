@@ -1,5 +1,9 @@
-﻿@model EpiserverSite.Models.ViewModels.ArticleListingPageViewModel
+﻿@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.ViewModels.ArticleListingPageViewModel
 
-@Html.DisplayFor(x => x.MainContentArea)
+
+@**Html.PropertyFor(x => x.CurrentPage.MainContentarea) *@
 
 @Html.DisplayFor(x => x.BottomContentArea)
+
+}

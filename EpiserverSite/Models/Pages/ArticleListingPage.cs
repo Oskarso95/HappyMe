@@ -3,6 +3,8 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using EpiserverSite.Business;

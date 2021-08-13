@@ -4,6 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
+using EPiServer.Web;
 
 namespace EpiserverSite.Models.Pages
 {
@@ -13,20 +14,94 @@ namespace EpiserverSite.Models.Pages
     {
         [CultureSpecific]
         [Display(
-            Name = "Main body",
-            Description =
-                "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
+            Name = "Heading",
+            Description = "Heading shown on top of the page",
             GroupName = SystemTabNames.Content,
             Order = 100)]
-        public virtual XhtmlString MainBody { get; set; }
+        public virtual string Heading { get; set; }
 
         [CultureSpecific]
         [Display(
-            Name = "Main content area",
+            Name = "Ingress",
             Description =
-                "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
+                "The ingress is displayed below the header on top of the page",
             GroupName = SystemTabNames.Content,
             Order = 200)]
-        public virtual ContentArea MainContentArea { get; set; }
+        [UIHint(UIHint.Textarea)]
+        public virtual string Ingress { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Background image",
+            Description =
+                "Image to set background of page",
+            GroupName = SystemTabNames.Content,
+            Order = 250)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference BackgroundImage { get; set; }
+
+
+        [CultureSpecific]
+        [Display(
+            Name = "Main Content",
+            Description =
+                "The content is displayed below the heading and ingress",
+            GroupName = SystemTabNames.Content,
+            Order = 300)]
+        public virtual XhtmlString MainContent { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Aside area",
+            Description =
+                "The content is displayed on the right side of the page.",
+            GroupName = SystemTabNames.Content,
+            Order = 400)]
+        public virtual ContentArea AsideArea { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Bottom area",
+            Description =
+                "The content is displayed on the bottom of the page.",
+            GroupName = SystemTabNames.Content,
+            Order = 500)]
+        public virtual ContentArea BottomArea { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Icon",
+            Description =
+                "Icon displayed in the footer",
+            GroupName = SystemTabNames.Content,
+            Order = 600)]
+        public virtual ContentArea Icon { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Icon image",
+            Description =
+                "Icon image displayed primary in the footer links",
+            GroupName = SystemTabNames.Content,
+            Order = 700)]
+        public virtual ContentArea IconImage { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Hide from search results",
+            Description =
+                "Icon image displayed primary in the footer links",
+            GroupName = SystemTabNames.Content,
+            Order = 800)]
+        public virtual bool HideFromSearch { get; set; }
+
+        [CultureSpecific]
+        [Display(
+            Name = "Hide from article listings",
+            Description =
+                "Icon image displayed primary in the footer links",
+            GroupName = SystemTabNames.Content,
+            Order = 1000)]
+        public virtual bool HideFromListings { get; set; }
     }
 }

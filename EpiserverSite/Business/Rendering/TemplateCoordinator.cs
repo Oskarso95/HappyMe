@@ -9,6 +9,6 @@ namespace EpiserverSite.Business.Rendering
     class TemplateCoordinator
     {
         public const string BlockFolder = "~/Views/Shared/Blocks/";
-        public const string PagePartialsFolder = "~/Views/Shared/Partial/";
+        public const string PagePartialsFolder = "~/Views/Shared/PagePartials/";
     }
 }

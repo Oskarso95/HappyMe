@@ -1,14 +1,2 @@
 ﻿@using EpiserverSite
 @model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.ArticlePage>
-
-<div class="row">
-    <div class="col-12 justify-content-center align-items-center">
-        @Html.DisplayFor(x => x.CurrentPage.MainBody)
-    </div>
-</div>
-
-@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new
-{
-    cssClass = "row",
-    Tag = Global.ContentAreaTags.OneFourthWidth,
-})
