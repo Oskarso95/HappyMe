@@ -22,11 +22,11 @@ namespace EpiserverSite.Business.Rendering
         {
             return tag.ToLower() switch
             {
-                "col-12" => "full",
-                "col-8" => "twothirds",
-                "col-6" => "half",
-                "col-4" => "onethird",
-                "col-3" => "onefourth",
+                "row w-100" => "full",
+                "row w-66" => "twothirds",
+                "row w-50" => "half",
+                "row w-33" => "onethird",
+                "row w-25" => "onefourth",
                 _ => "",
             };
         }

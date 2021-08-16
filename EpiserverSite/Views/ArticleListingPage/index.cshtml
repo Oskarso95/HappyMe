@@ -1,9 +1,13 @@
-﻿@using ImageProcessor.Web.Episerver
+﻿@using EPiServer
+@using ImageProcessor.Web.Episerver
+@using Global = EpiserverSite.Global
 @model EpiserverSite.Models.ViewModels.ArticleListingPageViewModel
 
 
-@**Html.PropertyFor(x => x.CurrentPage.MainContentarea) *@
+@Html.PropertyFor(x => x.CurrentPage.MainContentarea, new
+{
+    Tag = Global.ContentAreaTags.FullWidth,
+    CssClass = "row my-5"
+})
 
-@Html.DisplayFor(x => x.BottomContentArea)
-
-}
+@Html.PropertyFor(x => x.BottomContentArea, new {Tag = Global.ContentAreaTags.FullWidth, CssClass = "row"})

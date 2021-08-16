@@ -11,21 +11,13 @@ namespace EpiserverSite
     {
         public static class ContentAreaTags
         {
-            public const string FullWidth = "col-12";
-            public const string HalfWidth = "col-6";
-            public const string TwoThirdsWidth = "col-8";
-            public const string OneThirdWidth = "col-4";
-            public const string OneFourthWidth = "col-3";
+            public const string FullWidth = "row w-100";
+            public const string TwoThirdsWidth = "row w-66";
+            public const string HalfWidth = "row w-50";
+            public const string OneThirdWidth = "row w-33";
+            public const string OneFourthWidth = "row w-25";
         }
 
-        public static class ContentAreaWidths
-        {
-            public const int FullWidth = 12;
-            public const int HalfWidth = 6;
-            public const int TwoThirds = 8;
-            public const int OneThirdWidth = 4;
-            public const int OneFourthWidth = 3;
-        }
 
         [GroupDefinitions()]
         public static class GroupNames

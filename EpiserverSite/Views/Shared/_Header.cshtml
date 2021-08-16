@@ -2,9 +2,22 @@
 @using ImageProcessor.Web.Episerver
 @model IPageViewModel<SitePageData>
 
+@{
+    var bg = "";
 
-<header class="bg-image">
-    <nav class="d-flex flex-column bg-transparent text-white @(Model.CurrentPage.BackgroundImage != null ? "bg-blurred" : "")">
+    if (ViewData.ContainsKey("hasImage"))
+    {
+        bg = (bool) ViewData["hasImage"] ? "bg-blurred" : "bg-white";
+    }
+    else
+    {
+        bg = "";
+    }
+}
+
+
+<header class="@bg">
+    <nav class="d-flex flex-column text-white pb-5">
         <div class="w-100 d-flex align-items-center justify-content-center">
             @if (Model.Layout.SiteImage != null)
             {

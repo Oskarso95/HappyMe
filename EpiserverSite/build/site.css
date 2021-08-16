@@ -10821,6 +10821,14 @@ footer .contact-details ul li {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
+.w-66 {
+  width: 66.6666666667%;
+}
+
+.w-33 {
+  width: 33.3333333333%;
+}
+
 .textimageblock {
   color: white !important;
 }
@@ -10835,4 +10843,34 @@ footer .contact-details ul li {
 }
 .textimageblock p {
   font-size: 20px;
+}
+
+.articlepage {
+  flex-direction: row !important;
+}
+.articlepage div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.articlepage:nth-of-type(2n) {
+  flex-direction: row-reverse !important;
+}
+.articlepage:nth-of-type(2n) div:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+
+.articlepage-text-container {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  .articlepage:nth-of-type(2n) {
+    flex-direction: row !important;
+  }
 }

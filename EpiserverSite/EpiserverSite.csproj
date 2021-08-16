@@ -322,6 +322,7 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\ArticlePage\Index.cshtml" />
     <None Include="Views\ArticleListingPage\index.cshtml" />
+    <None Include="Views\ImageFile\Index.cshtml" />
     <None Include="Views\Preview\Index.cshtml" />
     <None Include="Views\Shared\Blocks\CarouselBlock.cshtml" />
     <None Include="Views\Shared\Blocks\CarouselItemBlock.cshtml" />
@@ -329,6 +330,7 @@
     <None Include="Views\Shared\Blocks\QuoteBlock.cshtml" />
     <None Include="Views\Shared\Blocks\TeaserBlock.cshtml" />
     <None Include="Views\Shared\Blocks\TextImageBlock.cshtml" />
+    <None Include="Views\Shared\DisplayTemplates\Image.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\LinkItemCollection.cshtml" />
     <None Include="Views\Shared\PagePartials\ArticlePage.cshtml" />
     <None Include="Views\Shared\_Breadcrumbs.cshtml" />

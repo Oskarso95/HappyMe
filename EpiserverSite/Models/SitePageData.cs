@@ -30,13 +30,12 @@ namespace EpiserverSite.Models
         //[UIHint(UIHint.Textarea)]
         //public virtual String Ingress { get; set; }
 
-
-        [CultureSpecific]
-        [Display(Name = "Background image",
-            Description = "Background image shown on page",
-            GroupName = SystemTabNames.PageHeader,
-            Order = 300)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference BackgroundImage { get; set; }
+        // [CultureSpecific]
+        // [Display(Name = "Background image",
+        //     Description = "Background image shown on page",
+        //     GroupName = SystemTabNames.PageHeader,
+        //     Order = 300)]
+        // [UIHint(UIHint.Image)]
+        // public virtual ContentReference BackgroundImage { get; set; }
     }
 }

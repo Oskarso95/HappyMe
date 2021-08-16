@@ -26,11 +26,10 @@ namespace EpiserverSite.Models.ViewModels
 
         public List<NavItemViewModel> NavItems { get; set; }
 
-
         public PageViewModel(T currentPage)
         {
             CurrentPage = currentPage;
-            Breadcrumbs = GetBreadcrumbs(currentPage.ContentLink);
+            // Breadcrumbs = GetBreadcrumbs(currentPage.ContentLink);
             NavItems = GetNavigationItems(currentPage.ContentLink, 4);
         }
 

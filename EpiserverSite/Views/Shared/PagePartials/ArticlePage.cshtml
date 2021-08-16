@@ -1,10 +1,13 @@
 ﻿@model EpiserverSite.Models.Pages.ArticlePage
 
-<div class="col-md-6">
-    @Html.PropertyFor(x => x.BackgroundImage, new {CssClass = "w-100"})
+<div class="col-12 col-md-6">
+    <a href="@Model.LinkURL">
+        @Html.PropertyFor(x => x.BackgroundImage, new {CssClass = "w-100 d-block"})
+    </a>
 </div>
-<div class="col-md-6">
-    @Html.PropertyFor(x => x.Heading, new {CssClass = "display-4"})
-
-    @Html.PropertyFor(x => x.Ingress, new {CssClass = "lead"})
+<div class="col-12 col-md-6">
+    <div class="articlepage-text-container px-5">
+        <h1 @Html.EditAttributes(x => x.Heading) class="display-2">@Model.Heading</h1>
+        <p @Html.EditAttributes(x => x.Ingress) class="lead">@Model.Ingress</p>
+    </div>
 </div>

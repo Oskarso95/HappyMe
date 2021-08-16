@@ -14,15 +14,15 @@ namespace EpiserverSite.Models.Pages
         Description = "StartPage of EpiserverSite")]
     public class StartPage : SitePageData
     {
-        //[CultureSpecific]
-        //[Display(
-        //    Name = "Background image",
-        //    Description =
-        //        "Large background image displayed on the startpage.",
-        //    GroupName = SystemTabNames.Content,
-        //    Order = 100)]
-        //[UIHint(UIHint.Image)]
-        //public virtual ContentReference BackgroundImage { get; set; }
+        [CultureSpecific]
+        [Display(
+            Name = "Background image",
+            Description =
+                "Large background image displayed on the startpage.",
+            GroupName = SystemTabNames.Content,
+            Order = 100)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference BackgroundImage { get; set; }
 
         [CultureSpecific]
         [Display(

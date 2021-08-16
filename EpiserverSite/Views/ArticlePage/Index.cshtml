@@ -1,2 +1,35 @@
 ﻿@using EpiserverSite
+@using ImageProcessor.Web.Episerver
 @model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.ArticlePage>
+
+@{
+    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).ResizeCrop(1920, null, null, null)) : "";
+}
+
+@section HeroSection
+{
+
+    <div class="row w-100 h-100 bg-image" @bgImage>
+        <div class="w-100 m-0 p-0">
+            @{
+                Html.RenderPartial("_Header", Model, new ViewDataDictionary
+                {
+                    {
+                        "hasImage", Model.CurrentPage.BackgroundImage != null
+                    }
+                });
+            }
+        </div>
+    </div>
+}
+
+<div class="row d-flex align-items-center justify-content-center">
+    <div class="w-75 text-center">
+        @*@Html.PropertyFor(x => x.CurrentPage.Heading, new {CustomTag = "h1"})*@
+        <h1 @Html.EditAttributes(x => x.CurrentPage.Heading) class="display-1">@Model.CurrentPage.Heading</h1>
+
+        <p @Html.EditAttributes(x => x.CurrentPage.Ingress)></p>
+
+        @Html.PropertyFor(x => x.CurrentPage.MainContent)
+    </div>
+</div>
