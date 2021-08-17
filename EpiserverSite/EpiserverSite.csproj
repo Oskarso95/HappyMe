@@ -146,6 +146,26 @@
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ImageResizer.4.2.8\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.DiskCache, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ImageResizer.Plugins.DiskCache.4.2.8\lib\net45\ImageResizer.Plugins.DiskCache.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.PrettyGifs, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ImageResizer.Plugins.PrettyGifs.4.2.8\lib\net45\ImageResizer.Plugins.PrettyGifs.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="ImageResizer.Plugins.SimpleFilters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ImageResizer.Plugins.SimpleFilters.4.2.8\lib\net45\ImageResizer.Plugins.SimpleFilters.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>

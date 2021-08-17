@@ -8,8 +8,9 @@
 
 @section HeroSection
 {
+    @Html.PropertyFor(x => x.CurrentPage.TopArea, new {Tag = Global.ContentAreaTags.FullWidth})
 
-    <div class="row w-100 h-100 bg-image" @bgImage>
+    <div class="row w-100 h-100 bg-image triangle-down" @bgImage>
         <div class="w-100 m-0 p-0">
             @{
                 Html.RenderPartial("_Header", Model, new ViewDataDictionary

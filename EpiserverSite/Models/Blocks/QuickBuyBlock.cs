@@ -24,7 +24,7 @@ namespace EpiserverSite.Models.Blocks
         [CultureSpecific]
         [Display(
             Name = "Button text",
-            Description = "Fallback text for button",
+            Description = "Text displayed on button",
             GroupName = SystemTabNames.Content,
             Order = 200)]
         public virtual string ButtonText { get; set; }

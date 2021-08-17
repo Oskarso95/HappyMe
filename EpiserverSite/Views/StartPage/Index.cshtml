@@ -5,13 +5,13 @@
 @model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.StartPage>
 
 @{
-    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).ResizeCrop(1920, null, null, null)) : "";
+    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.ContentUrl(Model.CurrentPage.BackgroundImage)).ResizeCrop(1920, null, null, null)) : "";
 }
 
 @section HeroSection
 {
 
-    <div class="row w-100 h-100 bg-image" @bgImage>
+    <div class="row w-100 bg-image triangle-down" @bgImage>
         <div class="w-100 m-0 p-0">
             @{
                 Html.RenderPartial("_Header", Model, new ViewDataDictionary
@@ -25,14 +25,13 @@
         <div class="row">
             @Html.PropertyFor(x => x.CurrentPage.RightContentArea, new
             {
-                CssClass = "",
+                CssClass = "w-50 align-items-center text-center justify-content-center flex-column d-flex",
                 Tag = Global.ContentAreaTags.HalfWidth,
             })
 
-
             @Html.PropertyFor(x => x.CurrentPage.LeftContentArea, new
             {
-                CssClass = "",
+                CssClass = "w-50 align-items-center text-center justify-content-center flex-column d-flex",
                 Tag = Global.ContentAreaTags.HalfWidth
             })
         </div>

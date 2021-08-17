@@ -4,6 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
+using EPiServer.ChangeLog;
 using EPiServer.Web;
 
 namespace EpiserverSite.Models.Pages
@@ -103,5 +104,14 @@ namespace EpiserverSite.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1000)]
         public virtual bool HideFromListings { get; set; }
+
+
+        [CultureSpecific]
+        [Display(
+            Name = "Top content area",
+            Description = "Content displayed above header",
+            GroupName = SystemTabNames.Content,
+            Order = 1100)]
+        public virtual ContentArea TopArea { get; set; }
     }
 }

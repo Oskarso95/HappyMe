@@ -1,4 +1,7 @@
-﻿@model EpiserverSite.Views.Shared.Blocks.QuickBuyBlock
+﻿@model EpiserverSite.Models.Blocks.QuickBuyBlock
 
-<button class="btn btn-primary">
-</button>
+<div class="w-100 d-flex align-items-center justify-content-center my-3">
+    <button class="btn btn-pink w-25">
+        @(!string.IsNullOrWhiteSpace(Model.ButtonText) ? Model.ButtonText : "Bestill nå")
+    </button>
+</div>
