@@ -2,10 +2,10 @@
 @model EpiserverSite.Models.Blocks.TextImageBlock
 
 @{
-    var bgImage = Model.BackgroundImage != null ? String.Format("style=background-image: url({0})", Html.ProcessImage(Url.ContentUrl(Model.BackgroundImage)).ResizeCrop(1000, null, null, null)) : "";
+    var bgImage = Model.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.ContentUrl(Model.BackgroundImage)).ResizeCrop(1000, null, null, null)) : "";
 }
 
-<div class="block-body" @bgImage>
+<div class="block-body my-5" @bgImage>
     @if (!string.IsNullOrWhiteSpace(Model.Heading))
     {
         <h1 @Html.EditAttributes(x => x.Heading)>@Model.Heading</h1>
@@ -13,7 +13,7 @@
 
     @if (Model.Image != null)
     {
-        <img src="@(Html.ProcessImage(Url.ContentUrl(Model.Image)).ResizeCrop(400, 400, null, null))"/>
+        <img src="@(Html.ProcessImage(Url.ContentUrl(Model.Image)).Resize(800, 800))"/>
     }
 
     @if (Model.TextContent != null)

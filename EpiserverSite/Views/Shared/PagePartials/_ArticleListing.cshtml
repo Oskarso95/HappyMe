@@ -1,0 +1,21 @@
+﻿@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.Pages.ArticlePage
+
+<div class="col">
+    @if (Model.BackgroundImage != null)
+    {
+        @Html.PropertyFor(x => x.BackgroundImage)
+
+        // <img src="@Html.ProcessImage(Url.ContentUrl(Model.BackgroundImage)).ResizeCrop(1000, null, null, null)"/>
+    }
+    <div class="w-75 text-center my-3">
+        @if (!string.IsNullOrWhiteSpace(Model.Heading))
+        {
+            <h1 class="display-3" @Html.EditAttributes(x => x.Heading)>@Model.Heading</h1>
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.Ingress))
+        {
+            <p class="lead" @Html.EditAttributes(x => x.Ingress)>@Model.Ingress</p>
+        }
+    </div>
+</div>

@@ -50,6 +50,7 @@ namespace EpiserverSite.Models.Blocks
             Description = "Background image of block",
             GroupName = SystemTabNames.Content,
             Order = 500)]
+        [UIHint(UIHint.Image)]
         public virtual ContentReference BackgroundImage { get; set; }
     }
 }

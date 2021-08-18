@@ -600,6 +600,7 @@ progress {
 
 .container,
 .container-fluid,
+.container-xxxl,
 .container-xxl,
 .container-xl,
 .container-lg,
@@ -3909,6 +3910,7 @@ textarea.form-control-lg {
 }
 .navbar > .container,
 .navbar > .container-fluid,
+.navbar > .container-xxxl,
 .navbar > .container-sm,
 .navbar > .container-md,
 .navbar > .container-lg,
@@ -10817,6 +10819,10 @@ footer .contact-details ul li {
   color: #9B9B9B;
 }
 
+body {
+  background-color: #595959;
+}
+
 .bg-blurred {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
@@ -10829,21 +10835,38 @@ footer .contact-details ul li {
   width: 33.3333333333%;
 }
 
-.row,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-  margin: 0 !important;
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   padding: 0 !important;
+}
+
+.container-xxxl {
+  max-width: 1920px !important;
+  background-color: white;
+  padding: 0;
 }
 
 .btn-pink {
   color: white;
   background-color: #EC008C;
   font-weight: bold;
+}
+
+.bg-light-pink {
+  background-color: #FBE8F0;
+}
+
+.bg-light-blue {
+  background-color: #EAF6FD;
+}
+
+.bg-light-beige {
+  background-color: #FEEEE0;
+}
+
+.hero-container {
+  min-height: 1000px;
 }
 
 .textimageblock {

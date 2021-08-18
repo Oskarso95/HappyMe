@@ -1,0 +1,6 @@
+﻿@model EpiserverSite.Models.Blocks.InformationBlock;
+
+<div class="w-100 @(!string.IsNullOrWhiteSpace(Model.CssClass) ? Model.CssClass : "")">
+    <h1 @Html.EditAttributes(x => x.Heading) class="display-5">@Model.Heading</h1>
+    <p @Html.EditAttributes(x => x.TextContent) class="lead">@Model.TextContent</p>
+</div>

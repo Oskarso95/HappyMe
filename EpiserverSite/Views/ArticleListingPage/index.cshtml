@@ -10,4 +10,15 @@
     CssClass = "row my-5"
 })
 
+<div class="row my-5">
+    @foreach (var articlePage in Model.ArticleListings)
+    {
+
+        {
+            Html.RenderPartial("PagePartials/_ArticleListing", articlePage);
+        }
+    }
+
+</div>
+
 @Html.PropertyFor(x => x.BottomContentArea, new {Tag = Global.ContentAreaTags.FullWidth, CssClass = "row"})

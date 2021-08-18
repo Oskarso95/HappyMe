@@ -1,5 +1,7 @@
 @import "variables";
-
+body{
+    background-color: $footer-bg-color;
+}
 .bg-blurred {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
@@ -11,15 +13,38 @@
 .w-33 {
   width: 33.333333333333333%;
 }
-
-.row,
-.container-fluid {
-  margin: 0 !important;
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   padding: 0 !important;
+}
+
+.container-xxxl{
+    @extend .container-fluid;
+    max-width: 1920px !important;
+    background-color: white;
+    padding: 0;
 }
 
 .btn-pink {
   color: white;
   background-color: $btn-pink-color;
   font-weight: bold;
+}
+
+
+.bg-light-pink{
+    background-color: $theme-color-light-pink;
+}
+.bg-light-blue{
+    background-color: $theme-color-light-blue;
+    
+    
+}
+.bg-light-beige{
+    background-color: $theme-color-light-beige;
+    
+}
+.hero-container{
+    min-height: 1000px;
 }

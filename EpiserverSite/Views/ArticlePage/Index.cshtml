@@ -3,14 +3,14 @@
 @model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.ArticlePage>
 
 @{
-    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).ResizeCrop(1920, null, null, null)) : "";
+    var bgImage = Model.CurrentPage.BackgroundImage != null ? string.Format("style=background-image:url({0})", Html.ProcessImage(Url.Content(Url.ContentUrl(Model.CurrentPage.BackgroundImage))).Resize(1920, null)) : "";
 }
 
 @section HeroSection
 {
     @Html.PropertyFor(x => x.CurrentPage.TopArea, new {Tag = Global.ContentAreaTags.FullWidth})
 
-    <div class="row w-100 h-100 bg-image triangle-down" @bgImage>
+    <div class="row hero-container w-100 bg-image triangle-down" @bgImage>
         <div class="w-100 m-0 p-0">
             @{
                 Html.RenderPartial("_Header", Model, new ViewDataDictionary
@@ -26,10 +26,9 @@
 
 <div class="row d-flex align-items-center justify-content-center">
     <div class="w-75 text-center">
-        @*@Html.PropertyFor(x => x.CurrentPage.Heading, new {CustomTag = "h1"})*@
         <h1 @Html.EditAttributes(x => x.CurrentPage.Heading) class="display-1">@Model.CurrentPage.Heading</h1>
 
-        <p @Html.EditAttributes(x => x.CurrentPage.Ingress)></p>
+        <p class="lead" @Html.EditAttributes(x => x.CurrentPage.Ingress)>@Model.CurrentPage.Ingress</p>
 
         @Html.PropertyFor(x => x.CurrentPage.MainContent)
     </div>
