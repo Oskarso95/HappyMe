@@ -26,23 +26,23 @@
             <div class="w-50">
                 @Html.PropertyFor(x => x.CurrentPage.RightContentArea, new
                 {
-                    CssClass = "align-items-center text-center justify-content-center flex-column d-flex",
+                    CssClass = "align-items-center text-center justify-content-center flex-column d-flex text-white",
                     Tag = Global.ContentAreaTags.HalfWidth,
                 })
             </div>
             <div class="w-50">
                 @Html.PropertyFor(x => x.CurrentPage.LeftContentArea, new
                 {
-                    CssClass = " align-items-center text-center justify-content-center flex-column d-flex",
+                    CssClass = " align-items-center text-center justify-content-center flex-column d-flex text-white",
                     Tag = Global.ContentAreaTags.HalfWidth
                 })
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row main-content">
         @Html.PropertyFor(x => x.CurrentPage.ContentArea, new
         {
-            CssClass = "row align-items-center text-center justify-content-center",
+            CssClass = "row align-items-center text-center justify-content-center text-dark",
             Tag = Global.ContentAreaTags.FullWidth
         })
     </div>

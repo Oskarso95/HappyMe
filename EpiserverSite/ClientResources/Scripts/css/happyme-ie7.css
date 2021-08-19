@@ -1,0 +1,127 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'happyme';
+  font-style: normal;
+  font-weight: normal;
+
+  /* fix buttons height */
+  line-height: 1em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+
+.icon-_ext_brc_foodcertified { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-_ext_vitaelab_logo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-_ext_vitaelab_logo_neg { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-barsnlig_godt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-barsnlig_godt_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.icon-barsnlig_godt_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.icon-barsnlig_godt_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;'); }
+.icon-barsnlig_godt_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
+.icon-calamari { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
+.icon-calamari_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe809;&nbsp;'); }
+.icon-calamari_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
+.icon-calamari_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;'); }
+.icon-confirmation { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80c;&nbsp;'); }
+.icon-calamari_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80d;&nbsp;'); }
+.icon-daglig_dose { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80e;&nbsp;'); }
+.icon-daglig_dose_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80f;&nbsp;'); }
+.icon-daglig_dose_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe810;&nbsp;'); }
+.icon-daglig_dose_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe811;&nbsp;'); }
+.icon-daglig_dose_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe812;&nbsp;'); }
+.icon-frukt_smak { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe813;&nbsp;'); }
+.icon-frukt_smak_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe814;&nbsp;'); }
+.icon-frukt_smak_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe815;&nbsp;'); }
+.icon-frukt_smak_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe816;&nbsp;'); }
+.icon-frukt_smak_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe817;&nbsp;'); }
+.icon-get_in_touch_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe818;&nbsp;'); }
+.icon-get_in_touch_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe819;&nbsp;'); }
+.icon-get_in_touch_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81a;&nbsp;'); }
+.icon-get_in_touch_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81b;&nbsp;'); }
+.icon-health_benefits { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81c;&nbsp;'); }
+.icon-health_benefits_active { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81d;&nbsp;'); }
+.icon-health_benefits_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81e;&nbsp;'); }
+.icon-health_benefits_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81f;&nbsp;'); }
+.icon-health_benefits_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe820;&nbsp;'); }
+.icon-health_benefits_passive { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe821;&nbsp;'); }
+.icon-health_benefits_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe822;&nbsp;'); }
+.icon-hm_safety { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe823;&nbsp;'); }
+.icon-info-_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe824;&nbsp;'); }
+.icon-info-_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe825;&nbsp;'); }
+.icon-info { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe826;&nbsp;'); }
+.icon-info_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe827;&nbsp;'); }
+.icon-info_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe828;&nbsp;'); }
+.icon-info_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe829;&nbsp;'); }
+.icon-info_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82a;&nbsp;'); }
+.icon-ingen_binding { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82b;&nbsp;'); }
+.icon-ingen_binding_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82c;&nbsp;'); }
+.icon-ingen_binding_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82d;&nbsp;'); }
+.icon-ingen_binding_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82e;&nbsp;'); }
+.icon-ingen_binding_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe82f;&nbsp;'); }
+.icon-ingredients_active { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe830;&nbsp;'); }
+.icon-ingredients_passive { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe831;&nbsp;'); }
+.icon-ingredients_whats_in { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe832;&nbsp;'); }
+.icon-ingredients_whats_in_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe833;&nbsp;'); }
+.icon-ingredients_whats_in_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe834;&nbsp;'); }
+.icon-ingredients_whats_in_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe835;&nbsp;'); }
+.icon-ingredients_whats_in_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe836;&nbsp;'); }
+.icon-miljo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe837;&nbsp;'); }
+.icon-miljo_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe838;&nbsp;'); }
+.icon-miljo_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe839;&nbsp;'); }
+.icon-miljo_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83a;&nbsp;'); }
+.icon-miljo_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83b;&nbsp;'); }
+.icon-newsletter-_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83c;&nbsp;'); }
+.icon-newsletter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83d;&nbsp;'); }
+.icon-newsletter_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83e;&nbsp;'); }
+.icon-newsletter_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe83f;&nbsp;'); }
+.icon-newsletter_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe840;&nbsp;'); }
+.icon-newsletter_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe841;&nbsp;'); }
+.icon-norsk { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe842;&nbsp;'); }
+.icon-norsk_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe843;&nbsp;'); }
+.icon-norsk_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe844;&nbsp;'); }
+.icon-norsk_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe845;&nbsp;'); }
+.icon-norsk_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe846;&nbsp;'); }
+.icon-olje { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe847;&nbsp;'); }
+.icon-olje_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe848;&nbsp;'); }
+.icon-olje_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe849;&nbsp;'); }
+.icon-olje_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84a;&nbsp;'); }
+.icon-olje_pink-copy { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84b;&nbsp;'); }
+.icon-olje_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84c;&nbsp;'); }
+.icon-ordering_payment_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84d;&nbsp;'); }
+.icon-ordering_payment { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84e;&nbsp;'); }
+.icon-ordering_payment_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe84f;&nbsp;'); }
+.icon-ordering_payment_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe850;&nbsp;'); }
+.icon-ordering_payment_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe851;&nbsp;'); }
+.icon-practical_info { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe852;&nbsp;'); }
+.icon-practical_info_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe853;&nbsp;'); }
+.icon-practical_info_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe854;&nbsp;'); }
+.icon-practical_info_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe855;&nbsp;'); }
+.icon-practical_info_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe856;&nbsp;'); }
+.icon-rabatt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe857;&nbsp;'); }
+.icon-rabatt_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe858;&nbsp;'); }
+.icon-rabatt_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe859;&nbsp;'); }
+.icon-rabatt_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85a;&nbsp;'); }
+.icon-rett_hjem { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85b;&nbsp;'); }
+.icon-rabatt_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85c;&nbsp;'); }
+.icon-rett_hjem_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85d;&nbsp;'); }
+.icon-rett_hjem_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85e;&nbsp;'); }
+.icon-rett_hjem_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe85f;&nbsp;'); }
+.icon-rett_hjem_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe860;&nbsp;'); }
+.icon-safety { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe861;&nbsp;'); }
+.icon-safety_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe862;&nbsp;'); }
+.icon-safety_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe863;&nbsp;'); }
+.icon-safety_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe864;&nbsp;'); }
+.icon-safety_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe865;&nbsp;'); }
+.icon-shopping_bag { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe866;&nbsp;'); }
+.icon-tab_health_benefits_active { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe867;&nbsp;'); }
+.icon-tab_health_benefits_passive { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe868;&nbsp;'); }
+.icon-tab_ingredients_active { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe869;&nbsp;'); }
+.icon-tab_ingredients_passive { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86a;&nbsp;'); }
+.icon-what_is_hm { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86b;&nbsp;'); }
+.icon-what_is_hm_blue { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86c;&nbsp;'); }
+.icon-what_is_hm_green { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86d;&nbsp;'); }
+.icon-what_is_hm_orange { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86e;&nbsp;'); }
+.icon-what_is_hm_pink { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86f;&nbsp;'); }
+.icon-_ext_friend_of_the_sea { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe870;&nbsp;'); }
+.icon-_ext_friend_of_the_sea_neg { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe871;&nbsp;'); }
+.icon-_ext_gronpunkt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe872;&nbsp;'); }

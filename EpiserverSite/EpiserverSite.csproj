@@ -274,6 +274,7 @@
     <Compile Include="Business\ArticleDropdownSelectionFactory.cs" />
     <Compile Include="Business\ContentExtensions.cs" />
     <Compile Include="Business\ContentLocator.cs" />
+    <Compile Include="Business\IconSelectionAttribute.cs" />
     <Compile Include="Business\ICustomCssInContentArea.cs" />
     <Compile Include="Business\Initialization\CustomizedRenderingInitialization.cs" />
     <Compile Include="Business\Initialization\DependencyResolverInitialization.cs" />
@@ -299,7 +300,10 @@
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\Blocks\CarouselBlock.cs" />
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
+    <Compile Include="Models\Blocks\FactsBlock.cs" />
+    <Compile Include="Models\Blocks\FactsBlockColumn.cs" />
     <Compile Include="Models\Blocks\InformationBlock.cs" />
+    <Compile Include="Models\Blocks\LinkBlock.cs" />
     <Compile Include="Models\Blocks\QuoteBlock.cs" />
     <Compile Include="Models\Blocks\SiteBlockData.cs" />
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
@@ -327,9 +331,24 @@
     <Folder Include="Static\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\Scripts\css\animation.css" />
+    <Content Include="ClientResources\Scripts\css\happyme-codes.css" />
+    <Content Include="ClientResources\Scripts\css\happyme-embedded.css" />
+    <Content Include="ClientResources\Scripts\css\happyme-ie7-codes.css" />
+    <Content Include="ClientResources\Scripts\css\happyme-ie7.css" />
+    <Content Include="ClientResources\Scripts\css\happyme.css" />
+    <Content Include="ClientResources\Scripts\font\happyme.eot" />
+    <Content Include="ClientResources\Scripts\font\happyme.ttf" />
+    <Content Include="ClientResources\Scripts\font\happyme.woff" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <None Include="ClientResources\Scripts\Editors\IconAutoSuggestEditor.js" />
+    <None Include="ClientResources\Scripts\Editors\IconSelectionEditor.js" />
+    <None Include="ClientResources\Scripts\Editors\_IconMixin.js" />
+    <None Include="ClientResources\Scripts\font\happyme.svg" />
+    <None Include="ClientResources\Scripts\font\happyme.woff2" />
+    <None Include="Module.config" />
     <None Include="config\imageprocessor\cache.config" />
     <None Include="config\imageprocessor\processing.config" />
     <None Include="config\imageprocessor\security.config" />
@@ -353,6 +372,7 @@
     <None Include="Views\Preview\Index.cshtml" />
     <None Include="Views\Shared\Blocks\CarouselBlock.cshtml" />
     <None Include="Views\Shared\Blocks\CarouselItemBlock.cshtml" />
+    <None Include="Views\Shared\Blocks\FactsBlock.cshtml" />
     <None Include="Views\Shared\Blocks\InformationBlock.cshtml" />
     <None Include="Views\Shared\Blocks\QuickBuyBlock.cshtml" />
     <None Include="Views\Shared\Blocks\QuoteBlock.cshtml" />

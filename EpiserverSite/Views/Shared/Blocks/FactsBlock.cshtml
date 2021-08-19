@@ -1,0 +1,22 @@
+﻿@model EpiserverSite.Models.Blocks.FactsBlock
+
+<div class="w-100 row factsblock-container">
+
+    <div class="col-12 factsblock__banner @(!string.IsNullOrWhiteSpace(Model.Theme) ? Model.Theme : "")">
+        <div class="w-100 d-flex align-items-center justify-content-around">
+
+            <i class="@Model.LeftColumn.IconCssClass icon-xxl"></i>
+
+            @Html.PropertyFor(x => x.Heading)
+
+            <i class="@Model.RightColumn.IconCssClass icon-xxl"></i>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 factsblock__left-container">
+
+    </div>
+
+    <div class="col-12 col-md-6 factsblock__right-container">
+    </div>
+</div>

@@ -610,6 +610,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./frontend/icons/happyme.css":
+/*!************************************!*\
+  !*** ./frontend/icons/happyme.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://episerversite/./frontend/icons/happyme.css?");
+
+/***/ }),
+
 /***/ "./frontend/sass/index.scss":
 /*!**********************************!*\
   !*** ./frontend/sass/index.scss ***!
@@ -681,7 +691,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	__webpack_require__("./frontend/sass/index.scss");
-/******/ 	var __webpack_exports__ = __webpack_require__("./frontend/js/index.js");
+/******/ 	__webpack_require__("./frontend/js/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./frontend/icons/happyme.css");
 /******/ 	
 /******/ })()
 ;
