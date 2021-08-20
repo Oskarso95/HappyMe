@@ -11,9 +11,9 @@ namespace EpiserverSite.Models.ViewModels
         {
         }
 
-        public IEnumerable<ArticlePage> MainContentAreaArticles { get; set; }
+        public ContentArea MainContentArea { get; set; }
 
-        public IEnumerable<ArticlePage> ArticleListings { get; set; }
+        public ContentArea ArticleListings { get; set; }
 
         public ContentArea BottomContentArea { get; set; }
     }

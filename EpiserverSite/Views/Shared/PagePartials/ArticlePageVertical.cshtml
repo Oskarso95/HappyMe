@@ -5,8 +5,6 @@
     @if (Model.BackgroundImage != null)
     {
         @Html.PropertyFor(x => x.BackgroundImage)
-
-        // <img src="@Html.ProcessImage(Url.ContentUrl(Model.BackgroundImage)).ResizeCrop(1000, null, null, null)"/>
     }
     <div class="w-75 text-center my-3">
         @if (!string.IsNullOrWhiteSpace(Model.Heading))

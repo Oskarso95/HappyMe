@@ -9,7 +9,7 @@ namespace EpiserverSite.Models.Blocks
 {
     [ContentType(DisplayName = "FactsBlockColumn", GUID = "4a792852-df6f-42d7-9d5c-ce7ee9f88174",
         Description = "A column in a factsblock")]
-    public class FactsBlockColumn : BlockData
+    public class FactsColumnBlock : BlockData
     {
         [IconSelection]
         [Display(

@@ -7,17 +7,17 @@
 [class*="_orange"]{
     color: orange !important;
 }
-[class*=" _blue"]{
-    color: blue !important;
+[class*="_blue"]{
+    color: #A3DDF8 !important;
 }
 
-.icon-lg{
+.icon--lg{
     font-size: 60px;
 }
-.icon-xl{
+.icon--xl{
     font-size: 100px;
 }
 
-.icon-xxl{
+.icon--xxl{
     font-size: 200px;
 }

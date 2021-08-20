@@ -34,13 +34,13 @@ namespace EpiserverSite.Models.Blocks
             Description = "Left column of block",
             GroupName = SystemTabNames.Content,
             Order = 300)]
-        public virtual FactsBlockColumn LeftColumn { get; set; }
+        public virtual FactsColumnBlock LeftColumn { get; set; }
 
         [Display(
             Name = "Right column",
             Description = "Right column of block",
             GroupName = SystemTabNames.Content,
             Order = 400)]
-        public virtual FactsBlockColumn RightColumn { get; set; }
+        public virtual FactsColumnBlock RightColumn { get; set; }
     }
 }

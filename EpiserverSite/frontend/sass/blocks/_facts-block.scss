@@ -1,0 +1,23 @@
+.factsblock__banner {
+    height: 132px;
+  .factsblock__icon-container {
+    position: relative;
+    height: 132px;
+    i {
+        font-size: 90px;
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: solid 8px transparent;
+        border-bottom: solid 8px white;
+        border-left: solid 29px transparent;
+        border-right: solid 29px transparent;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

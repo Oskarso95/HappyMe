@@ -1,22 +1,22 @@
-﻿@model EpiserverSite.Models.Blocks.FactsBlock
+﻿@using EpiserverSite
+@model EpiserverSite.Models.Blocks.FactsBlock
 
-<div class="w-100 row factsblock-container">
+<div class="w-100 row factsblock-container justify-content-center">
+    <div class="col-12 factsblock__banner-container @(!string.IsNullOrWhiteSpace(Model.Theme) ? Model.Theme : "")">
+        <div class="factsblock__banner w-100 d-flex align-items-center justify-content-center">
+            <div class="w-25 factsblock__icon-container">
+                <i class="@Model.LeftColumn.IconCssClass"></i>
+            </div>
+            <div class="w-10">
+                <h1 @Html.EditAttributes(x => x.Heading) class="display-5 fw-bold text-center">@Model.Heading</h1>
+            </div>
 
-    <div class="col-12 factsblock__banner @(!string.IsNullOrWhiteSpace(Model.Theme) ? Model.Theme : "")">
-        <div class="w-100 d-flex align-items-center justify-content-around">
-
-            <i class="@Model.LeftColumn.IconCssClass icon-xxl"></i>
-
-            @Html.PropertyFor(x => x.Heading)
-
-            <i class="@Model.RightColumn.IconCssClass icon-xxl"></i>
+            <div class="w-25 factsblock__icon-container">
+                <i class="@Model.RightColumn.IconCssClass"></i>
+            </div>
         </div>
     </div>
-
-    <div class="col-12 col-md-6 factsblock__left-container">
-
-    </div>
-
-    <div class="col-12 col-md-6 factsblock__right-container">
-    </div>
+    @Html.PropertyFor(x => x.LeftColumn, new {Tag = Global.ContentAreaTags.HalfWidth})
+    <div class="spacer w-10"></div>
+    @Html.PropertyFor(x => x.RightColumn, new {Tag = Global.ContentAreaTags.HalfWidth})
 </div>

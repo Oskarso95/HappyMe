@@ -1,6 +1,6 @@
 @import "variables";
-body{
-    background-color: $footer-bg-color;
+body {
+  background-color: $footer-bg-color;
 }
 .bg-blurred {
   background-color: rgba(255, 255, 255, 0.6) !important;
@@ -13,17 +13,21 @@ body{
 .w-33 {
   width: 33.333333333333333%;
 }
-.row{
+
+.w-10 {
+  width: 10% !important;
+}
+.row {
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding: 0 !important;
 }
 
-.container-xxxl{
-    @extend .container-fluid;
-    max-width: 1920px !important;
-    background-color: white;
-    padding: 0;
+.container-xxxl {
+  @extend .container-fluid;
+  max-width: 1920px !important;
+  background-color: white;
+  padding: 0;
 }
 
 .btn-pink {
@@ -32,25 +36,26 @@ body{
   font-weight: bold;
 }
 
-
-.bg-light-pink{
-    background-color: $theme-color-light-pink;
+.bg-light-pink {
+  background-color: $theme-color-light-pink;
 }
-.bg-light-blue{
-    background-color: $theme-color-light-blue;
-    
-    
+.bg-light-blue {
+  background-color: $theme-color-light-blue;
 }
-.bg-light-beige{
-    background-color: $theme-color-light-beige;
-    
+.bg-light-beige {
+  background-color: $theme-color-light-beige;
 }
-.hero-container{
-    min-height: 1000px;
-    h1,h2,h3,h4,h5,p{
-        color:white;
-    }
+.hero-container {
+  min-height: 1000px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: white;
+  }
 }
-.text-inherit{
-    color: inherit;
+.text-inherit {
+  color: inherit;
 }

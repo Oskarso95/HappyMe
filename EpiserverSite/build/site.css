@@ -10835,6 +10835,10 @@ body {
   width: 33.3333333333%;
 }
 
+.w-10 {
+  width: 10% !important;
+}
+
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -10868,7 +10872,16 @@ body {
 .hero-container {
   min-height: 1000px;
 }
-.hero-container h1, .hero-container .h1, .hero-container h2, .hero-container .h2, .hero-container h3, .hero-container .h3, .hero-container h4, .hero-container .h4, .hero-container h5, .hero-container .h5, .hero-container p {
+.hero-container h1, .hero-container .h1,
+.hero-container h2,
+.hero-container .h2,
+.hero-container h3,
+.hero-container .h3,
+.hero-container h4,
+.hero-container .h4,
+.hero-container h5,
+.hero-container .h5,
+.hero-container p {
   color: white;
 }
 
@@ -10974,20 +10987,44 @@ body {
   color: orange !important;
 }
 
-[class*=" _blue"] {
-  color: blue !important;
+[class*=_blue] {
+  color: #A3DDF8 !important;
 }
 
-.icon-lg {
+.icon--lg {
   font-size: 60px;
 }
 
-.icon-xl {
+.icon--xl {
   font-size: 100px;
 }
 
-.icon-xxl {
+.icon--xxl {
   font-size: 200px;
+}
+
+.factsblock__banner {
+  height: 132px;
+}
+.factsblock__banner .factsblock__icon-container {
+  position: relative;
+  height: 132px;
+}
+.factsblock__banner .factsblock__icon-container i {
+  font-size: 90px;
+}
+.factsblock__banner .factsblock__icon-container i:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: solid 8px transparent;
+  border-bottom: solid 8px white;
+  border-left: solid 29px transparent;
+  border-right: solid 29px transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*!******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./frontend/icons/happyme.css ***!

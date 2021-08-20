@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using EPiServer;
 using EPiServer.Core;
+using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.PageExtensions;
 using EpiserverSite.Business;
@@ -26,16 +27,18 @@ namespace EpiserverSite.Controllers
         public ActionResult Index(ArticleListingPage currentPage)
         {
             var articlePages = GetArticlePages(currentPage);
-            var articlesInContentArea = GetContentAreaArticles(currentPage);
-            var filteredArticlePages = FilterArticlePages(articlePages, articlesInContentArea);
+            var articlesInMainContentArea = GetContentAreaArticles(currentPage);
+            var articleListings = FilterArticlePages(articlePages, articlesInMainContentArea);
             var sortOrder = currentPage.ArticleSortOrder;
 
             var model = new ArticleListingPageViewModel(currentPage)
             {
-                ArticleListings = filteredArticlePages,
-                MainContentAreaArticles = articlesInContentArea,
+                MainContentArea = addItemsInContentArea(articlesInMainContentArea),
+                ArticleListings = addItemsInContentArea(articleListings),
                 BottomContentArea = currentPage.BottomContentArea
             };
+
+
             return View(model);
         }
 
@@ -61,6 +64,23 @@ namespace EpiserverSite.Controllers
         {
             return articlePages.Where(y =>
                 !contentAreaArticles.Any(x => x.ContentLink.CompareToIgnoreWorkID(y.ContentLink)));
+        }
+
+        private ContentArea addItemsInContentArea(IEnumerable<ArticlePage> articlePages)
+        {
+            var articleListingsContentArea = new ContentArea();
+
+            foreach (var articlePage in articlePages)
+            {
+                var cai = new ContentAreaItem
+                {
+                    ContentLink = articlePage.ContentLink,
+                };
+                articleListingsContentArea.Items
+                    .Add(cai); // <-- throws error here complaining about object ref not set.
+            }
+
+            return articleListingsContentArea;
         }
     }
 }

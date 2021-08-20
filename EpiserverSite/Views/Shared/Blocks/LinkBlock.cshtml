@@ -1,0 +1,7 @@
+﻿@model EpiserverSite.Models.Blocks.LinkBlock
+
+
+@if (!string.IsNullOrWhiteSpace(Model.LinkText))
+{
+    <a @Html.EditAttributes(x => x.LinkText) href="@Model.Link" class="">@Model.LinkText</a>
+}

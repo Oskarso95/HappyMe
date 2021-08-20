@@ -3,22 +3,18 @@
 @using Global = EpiserverSite.Global
 @model EpiserverSite.Models.ViewModels.ArticleListingPageViewModel
 
+<div class="row my-5">
 
-@Html.PropertyFor(x => x.CurrentPage.MainContentarea, new
-{
-    Tag = Global.ContentAreaTags.FullWidth,
-    CssClass = "row my-5"
-})
+    @Html.PropertyFor(x => x.MainContentArea, new
+    {
+        Tag = Global.ContentAreaTags.Horizontal,
+        CssClass = "row w-100",
+        ChildrenCssClass = "row",
+    })
+</div>
 
 <div class="row my-5">
-    @foreach (var articlePage in Model.ArticleListings)
-    {
-
-        {
-            Html.RenderPartial("PagePartials/_ArticleListing", articlePage);
-        }
-    }
-
+    @Html.PropertyFor(x => x.ArticleListings, new {Tag = Global.ContentAreaTags.Vertical, ChildrenCssClass = "col"})
 </div>
 
 @Html.PropertyFor(x => x.BottomContentArea, new {Tag = Global.ContentAreaTags.FullWidth, CssClass = "row"})

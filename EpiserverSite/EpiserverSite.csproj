@@ -301,7 +301,7 @@
     <Compile Include="Models\Blocks\CarouselBlock.cs" />
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
     <Compile Include="Models\Blocks\FactsBlock.cs" />
-    <Compile Include="Models\Blocks\FactsBlockColumn.cs" />
+    <Compile Include="Models\Blocks\FactsColumnBlock.cs" />
     <Compile Include="Models\Blocks\InformationBlock.cs" />
     <Compile Include="Models\Blocks\LinkBlock.cs" />
     <Compile Include="Models\Blocks\QuoteBlock.cs" />
@@ -373,15 +373,17 @@
     <None Include="Views\Shared\Blocks\CarouselBlock.cshtml" />
     <None Include="Views\Shared\Blocks\CarouselItemBlock.cshtml" />
     <None Include="Views\Shared\Blocks\FactsBlock.cshtml" />
+    <None Include="Views\Shared\Blocks\FactsColumnBlock.cshtml" />
     <None Include="Views\Shared\Blocks\InformationBlock.cshtml" />
+    <None Include="Views\Shared\Blocks\LinkBlock.cshtml" />
     <None Include="Views\Shared\Blocks\QuickBuyBlock.cshtml" />
     <None Include="Views\Shared\Blocks\QuoteBlock.cshtml" />
     <None Include="Views\Shared\Blocks\TeaserBlock.cshtml" />
     <None Include="Views\Shared\Blocks\TextImageBlock.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\Image.cshtml" />
     <None Include="Views\Shared\DisplayTemplates\LinkItemCollection.cshtml" />
-    <None Include="Views\Shared\PagePartials\ArticlePage.cshtml" />
-    <None Include="Views\Shared\PagePartials\_ArticleListing.cshtml" />
+    <None Include="Views\Shared\PagePartials\ArticlePageHorizontal.cshtml" />
+    <None Include="Views\Shared\PagePartials\ArticlePageVertical.cshtml" />
     <None Include="Views\Shared\_Breadcrumbs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

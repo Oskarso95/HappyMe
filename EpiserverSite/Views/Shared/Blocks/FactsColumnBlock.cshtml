@@ -1,0 +1,11 @@
+﻿@model EpiserverSite.Models.Blocks.FactsColumnBlock
+
+<div class="w-25 factsblock-container justify-content-center d-flex">
+    <div class="w-75 text-center">
+        <h2 @Html.EditAttributes(x => x.Heading)>@Model.Heading</h2>
+
+        @Html.PropertyFor(x => x.Description)
+
+        @Html.PropertyFor(x => x.LinkBlock)
+    </div>
+</div>
