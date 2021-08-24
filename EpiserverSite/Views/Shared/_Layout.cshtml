@@ -9,7 +9,7 @@
     <link href="~/build/site.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="container-xxxl">
+<main class="container-xxxl">
 
     @if (IsSectionDefined("HeroSection"))
     {
@@ -27,7 +27,7 @@
     @{
         Html.RenderPartial("_Footer", Model);
     }
-</div>
+</main>
 <script src="~/build/index.js"></script>
 </body>
 </html>

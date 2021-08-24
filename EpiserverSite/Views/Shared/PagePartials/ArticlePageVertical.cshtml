@@ -1,19 +1,14 @@
-﻿@using ImageProcessor.Web.Episerver
-@model EpiserverSite.Models.Pages.ArticlePage
+﻿@model EpiserverSite.Models.Pages.ArticlePage
 
-<div class="col">
-    @if (Model.BackgroundImage != null)
-    {
-        @Html.PropertyFor(x => x.BackgroundImage)
-    }
-    <div class="w-75 text-center my-3">
-        @if (!string.IsNullOrWhiteSpace(Model.Heading))
-        {
-            <h1 class="display-3" @Html.EditAttributes(x => x.Heading)>@Model.Heading</h1>
-        }
-        @if (!string.IsNullOrWhiteSpace(Model.Ingress))
-        {
-            <p class="lead" @Html.EditAttributes(x => x.Ingress)>@Model.Ingress</p>
-        }
+<div class="articlepage-vertical__image-container">
+    <a href="@Model.LinkURL" class="articlepage-vertical__link">
+        @Html.PropertyFor(x => x.BackgroundImage, new {CssClass = "w-100"})
+    </a>
+</div>
+<div class="articlepage-vertical__text-container">
+    <div class="articlepage-vertical__text-wrapper">
+        <h1 @Html.EditAttributes(x => x.Heading) class="display-2">@Model.Heading</h1>
+        <p @Html.EditAttributes(x => x.Ingress) class="lead">@Model.Ingress</p>
     </div>
+
 </div>

@@ -11,13 +11,13 @@ namespace EpiserverSite
     {
         public static class ContentAreaTags
         {
-            public const string FullWidth = "row w-100";
-            public const string TwoThirdsWidth = "row w-66";
-            public const string HalfWidth = "row w-50";
-            public const string OneThirdWidth = "row w-33";
-            public const string OneFourthWidth = "row w-25";
-            public const string Vertical = "Vertical row";
-            public const string Horizontal = "Horizontal row";
+            public const string FullWidth = "w-100";
+            public const string TwoThirdsWidth = "w-66";
+            public const string HalfWidth = "w-50";
+            public const string OneThirdWidth = "w-33";
+            public const string OneFourthWidth = "w-25";
+            public const string Vertical = "vertical";
+            public const string Horizontal = "horizontal";
         }
 
 

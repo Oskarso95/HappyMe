@@ -3,18 +3,16 @@
 @using Global = EpiserverSite.Global
 @model EpiserverSite.Models.ViewModels.ArticleListingPageViewModel
 
-<div class="row my-5">
-
+<div class="maincontent-area my-5">
     @Html.PropertyFor(x => x.MainContentArea, new
     {
-        Tag = Global.ContentAreaTags.Horizontal,
-        CssClass = "row w-100",
-        ChildrenCssClass = "row",
+        Tag = Global.ContentAreaTags.Vertical,
+        CssClass = "flex-container",
     })
 </div>
 
-<div class="row my-5">
-    @Html.PropertyFor(x => x.ArticleListings, new {Tag = Global.ContentAreaTags.Vertical, ChildrenCssClass = "col"})
+<div class="articlepage-horizontal-container my-5">
+    @Html.PropertyFor(x => x.ArticleListings, new {Tag = Global.ContentAreaTags.Horizontal})
 </div>
 
 @Html.PropertyFor(x => x.BottomContentArea, new {Tag = Global.ContentAreaTags.FullWidth, CssClass = "row"})

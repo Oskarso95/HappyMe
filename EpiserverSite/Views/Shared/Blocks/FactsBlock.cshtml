@@ -1,4 +1,5 @@
-﻿@using EpiserverSite
+﻿@using EPiServer.Core
+@using EpiserverSite
 @model EpiserverSite.Models.Blocks.FactsBlock
 
 <div class="w-100 row factsblock-container justify-content-center">
@@ -10,7 +11,6 @@
             <div class="w-10">
                 <h1 @Html.EditAttributes(x => x.Heading) class="display-5 fw-bold text-center">@Model.Heading</h1>
             </div>
-
             <div class="w-25 factsblock__icon-container">
                 <i class="@Model.RightColumn.IconCssClass"></i>
             </div>

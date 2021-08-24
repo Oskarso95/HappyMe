@@ -1,0 +1,17 @@
+﻿@using EpiserverSite
+@model EpiserverSite.Models.Blocks.ListingSwipeBlock
+
+
+<div class="listing-swipe-block-container @(Model.CssClass)">
+    <div class="listing-swipe-block__header-container row">
+        <h5 @Html.EditAttributes(x => x.Heading) class=" col-12 fw-bold display-6 text-center"> @Model.Heading </h5>
+    </div>
+    @Html.PropertyFor(x => x.MainContent, new {Tag = Global.ContentAreaTags.FullWidth})
+
+    @if (Model.Link != null)
+    {
+        <div class="row">
+            @Html.PropertyFor(x => x.Link, new {CssClass = "col-12"})
+        </div>
+    }
+</div>

@@ -1,0 +1,19 @@
+﻿@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.Pages.ArticlePage
+
+@{
+    var image = Html.ProcessImage(Url.ContentUrl(Model.BackgroundImage)).ResizeCrop(600, null, null, null);
+
+}
+
+<div class="col-12 col-md-3 col-lg-3 col-xl-2">
+    <div class="card">
+        <img src="@image" class="card-img-top" alt="bg">
+        <div class="card-body">
+            <h5 @Html.EditAttributes(x => x.Heading) class="card-title">@Model.Heading</h5>
+            <p @Html.EditAttributes(x => x.Ingress) class="card-text">
+                @Model.Ingress
+            </p>
+        </div>
+    </div>
+</div>

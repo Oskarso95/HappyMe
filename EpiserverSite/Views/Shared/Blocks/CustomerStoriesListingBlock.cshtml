@@ -1,0 +1,57 @@
+﻿@using System.Data.Entity.ModelConfiguration.Conventions
+@using ImageProcessor.Web.Episerver
+@model EpiserverSite.Models.Blocks.CustomerStoriesListingBlock
+@{
+    var index = 0;
+}
+
+@if (Model.CustomerStories.Any())
+{
+    <div class="story__header">
+        <div class="story__header--image-wrapper">
+            @for (var i = 0; i < Model.CustomerStories.Count; i++)
+            {
+                var story = Model.CustomerStories[i];
+                <img id="image-@i" class="story__header--image @(i == 0 ? "active" : "")" src="@Html.ProcessImage(Url.ContentUrl(story.Image)).ResizeCrop(150, 150, null, null)"/>
+            }
+        </div>
+
+        <div class="story__header--pagination">
+            @for (var i = 0; i < Model.CustomerStories.Count; i++)
+            {
+                <span class="dot">
+                    <span id="dot-@i" class="inner-dot @(i == 0 ? "active" : "")"></span>
+                </span>
+            }
+        </div>
+    </div>
+
+    for (var i = 0; i < Model.CustomerStories.Count; i++)
+    {
+        var story = Model.CustomerStories[i];
+
+        <div id="story-@i" class="story__body @(i == 0 ? "d-flex" : "d-none")">
+            <div class="story__body--image">
+                <img src="@Html.ProcessImage(Url.ContentUrl(story.Image)).ResizeCrop(200, 200, null, null)"/>
+            </div>
+            <div class="story__body--content">
+                @if (!string.IsNullOrWhiteSpace(story.Heading))
+                {
+                    <h3 class="fw-bold text-start">@story.Heading</h3>
+                }
+
+                @if (story.Story != null)
+                {
+                    @Html.PropertyFor(x => story.Story, new {CssClass = "text-start p-0"})
+                }
+
+                @if (!string.IsNullOrWhiteSpace(story.Author))
+                {
+                    <p class="fw-bold">@story.Author</p>
+                }
+
+            </div>
+        </div>
+        index++;
+    }
+}

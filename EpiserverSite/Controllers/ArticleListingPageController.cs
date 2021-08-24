@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Web.Mvc;
+using Castle.MicroKernel.Registration;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
@@ -9,9 +10,11 @@ using EPiServer.Web.Mvc;
 using EPiServer.Web.PageExtensions;
 using EpiserverSite.Business;
 using EpiserverSite.Business.Rendering;
+using EpiserverSite.Models.Blocks;
 using EpiserverSite.Models.Pages;
 using EpiserverSite.Models.ViewModels;
 using ImageProcessor.Imaging.Colors;
+using static EpiserverSite.Helpers.ContentAreaHelpers;
 
 namespace EpiserverSite.Controllers
 {
@@ -33,11 +36,10 @@ namespace EpiserverSite.Controllers
 
             var model = new ArticleListingPageViewModel(currentPage)
             {
-                MainContentArea = addItemsInContentArea(articlesInMainContentArea),
-                ArticleListings = addItemsInContentArea(articleListings),
+                MainContentArea = currentPage.MainContentArea,
+                ArticleListings = FilterArticlePages(articlePages, articlesInMainContentArea),
                 BottomContentArea = currentPage.BottomContentArea
             };
-
 
             return View(model);
         }
@@ -50,10 +52,9 @@ namespace EpiserverSite.Controllers
 
         private IEnumerable<ArticlePage> GetContentAreaArticles(ArticleListingPage currentPage)
         {
-            if (currentPage.MainContentarea != null)
+            if (currentPage.MainContentArea != null)
             {
-                return currentPage.MainContentarea.Items
-                    .Select(x => _contentLoader.Get<ArticlePage>(x.ContentLink));
+                return currentPage.MainContentArea.GetFilteredItemsOfType<ArticlePage>().ToList();
             }
 
             return new List<ArticlePage>();
@@ -77,7 +78,7 @@ namespace EpiserverSite.Controllers
                     ContentLink = articlePage.ContentLink,
                 };
                 articleListingsContentArea.Items
-                    .Add(cai); // <-- throws error here complaining about object ref not set.
+                    .Add(cai);
             }
 
             return articleListingsContentArea;

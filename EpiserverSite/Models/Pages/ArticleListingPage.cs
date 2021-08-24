@@ -22,8 +22,8 @@ namespace EpiserverSite.Models.Pages
             Description = "Content area to display Article page or listing block",
             GroupName = SystemTabNames.Content,
             Order = 100)]
-        [AllowedTypes(typeof(ArticlePage), typeof(TouchBlock))]
-        public virtual ContentArea MainContentarea { get; set; }
+        [AllowedTypes(typeof(ArticlePage), typeof(ListingSwipeBlock))]
+        public virtual ContentArea MainContentArea { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -40,7 +40,7 @@ namespace EpiserverSite.Models.Pages
             Description = "Content area below main content",
             GroupName = SystemTabNames.Content,
             Order = 300)]
-        [AllowedTypes(typeof(ArticlePage), typeof(TouchBlock))]
+        [AllowedTypes(typeof(ArticlePage), typeof(ListingSwipeBlock))]
         public virtual ContentArea BottomContentArea { get; set; }
     }
 }

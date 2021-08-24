@@ -1,10 +1,10 @@
 .factsblock__banner {
-    height: 132px;
+  height: 132px;
   .factsblock__icon-container {
     position: relative;
     height: 132px;
     i {
-        font-size: 90px;
+      font-size: 90px;
       &:after {
         content: "";
         width: 0;
@@ -20,4 +20,11 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    
+
 }
