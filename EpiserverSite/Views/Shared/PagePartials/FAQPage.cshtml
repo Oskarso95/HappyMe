@@ -1,0 +1,18 @@
+﻿@model EpiserverSite.Models.Pages.FAQPage
+
+<div class="FAQ-block">
+    <div class="FAQ-block__body">
+        <i class="@Model.IconCssClass @Model.IconThemeCssClass icon-7x"></i>
+        <div class="FAQ-block__content-wrapper">
+            <div class="FAQ-block__content-header">
+                <a href="#" class="collapseables">
+                    @Model.PageName
+                </a>
+            </div>
+            <div class="FAQ-block__content-body d-none collapseable-content">
+                <h5 class="text-muted" @Html.EditAttributes(x => x.Question)> @Model.Question </h5>
+                @Html.PropertyFor(x => x.TextContent)
+            </div>
+        </div>
+    </div>
+</div>

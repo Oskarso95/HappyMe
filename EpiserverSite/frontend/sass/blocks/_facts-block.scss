@@ -4,6 +4,7 @@
     position: relative;
     height: 132px;
     i {
+      cursor:pointer;
       font-size: 90px;
       &:after {
         content: "";

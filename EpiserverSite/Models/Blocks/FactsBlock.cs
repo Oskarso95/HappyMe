@@ -29,6 +29,17 @@ namespace EpiserverSite.Models.Blocks
         [SelectOne(SelectionFactoryType = typeof(ThemeDropDownSelectionFactory))]
         public virtual string Theme { get; set; }
 
+        [ScaffoldColumn(false)]
+        public virtual string IconThemeCssClass
+        {
+            get
+            {
+                var theme = this.GetPropertyValue(x => x.Theme);
+                return theme + "-icon";
+            }
+            set { this.SetPropertyValue(x => x.IconThemeCssClass, value); }
+        }
+
         [Display(
             Name = "Left column",
             Description = "Left column of block",

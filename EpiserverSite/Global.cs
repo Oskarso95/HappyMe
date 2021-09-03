@@ -26,6 +26,9 @@ namespace EpiserverSite
         {
             [Display(Name = "Site Settings", Order = 20)]
             public const string SiteSettings = "Sitesettings";
+
+            [Display(Name = "Specialized", Order = 50)]
+            public const string Specialized = "Specialized";
         }
     }
 }

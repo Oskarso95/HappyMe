@@ -1,0 +1,7 @@
+
+@for $j from 1 to 11 {
+  .icon-#{$j}x {
+    font-size: #{1 * $j}em;
+    padding: 0;
+  }
+}

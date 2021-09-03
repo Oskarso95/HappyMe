@@ -6,17 +6,17 @@
     <div class="col-12 factsblock__banner-container @(!string.IsNullOrWhiteSpace(Model.Theme) ? Model.Theme : "")">
         <div class="factsblock__banner w-100 d-flex align-items-center justify-content-center">
             <div class="w-25 factsblock__icon-container">
-                <i class="@Model.LeftColumn.IconCssClass"></i>
+                <i id="iconLeft" class="@Model.LeftColumn.IconCssClass @Model.IconThemeCssClass"></i>
             </div>
             <div class="w-10">
                 <h1 @Html.EditAttributes(x => x.Heading) class="display-5 fw-bold text-center">@Model.Heading</h1>
             </div>
             <div class="w-25 factsblock__icon-container">
-                <i class="@Model.RightColumn.IconCssClass"></i>
+                <i id="iconRight" class="@Model.RightColumn.IconCssClass @Model.IconThemeCssClass"></i>
             </div>
         </div>
     </div>
-    @Html.PropertyFor(x => x.LeftColumn, new {Tag = Global.ContentAreaTags.HalfWidth})
+    @Html.PropertyFor(x => x.LeftColumn, new {Tag = Global.ContentAreaTags.HalfWidth, CssClass = "css", ChildrenCssClass = "left-column"})
     <div class="spacer w-10"></div>
-    @Html.PropertyFor(x => x.RightColumn, new {Tag = Global.ContentAreaTags.HalfWidth})
+    @Html.PropertyFor(x => x.RightColumn, new {Tag = Global.ContentAreaTags.HalfWidth, CssClass = "css", ChildrenCssClass = "right-column"})
 </div>

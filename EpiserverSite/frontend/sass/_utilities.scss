@@ -36,15 +36,48 @@ body {
   font-weight: bold;
 }
 
-.bg-light-pink {
-  background-color: $theme-color-light-pink;
+.theme-blue {
+  background-color: $theme-color-blue;
 }
-.bg-light-blue {
-  background-color: $theme-color-light-blue;
+
+.theme-pink {
+  background-color: $theme-color-pink;
 }
-.bg-light-beige {
-  background-color: $theme-color-light-beige;
+
+.theme-green {
+  background-color: $theme-color-green;
 }
+
+.theme-beige{
+  background-color: $theme-color-beige;
+}
+
+.theme-orange{
+  background-color: $theme-color-orange;
+}
+
+.theme-blue-icon {
+  color: $icon-color-blue;
+}
+
+.theme-pink-icon {
+  color: $icon-color-pink;
+}
+
+.theme-green-icon {
+  color: $icon-color-green;
+}
+
+.theme-beige-icon{
+  color: $icon-color-beige;
+}
+
+.theme-orange-icon{
+  color: $icon-color-orange;
+}
+
+
+
 .hero-container {
   min-height: 1000px;
   h1,
@@ -60,8 +93,8 @@ body {
   color: inherit;
 }
 
-a{
-    color:black;
-    font-weight:bold default;
-    text-decoration: none;
+a {
+  color: black;
+  font-weight: bold default;
+  text-decoration: none;
 }

@@ -8,8 +8,15 @@
 @import "articlepage";
 @import "startpage";
 @import "blocks/text-image-block.scss";
-@import "icon-styling";
+@import "icons";
+@import "contactpage";
+@import "faq-page";
 
-@import "blocks/facts-block";
-@import "blocks/customer-stories-listing-block";
 @import "blocks/articlepage";
+@import "blocks/customer-stories-listing-block";
+@import "blocks/facts-block";
+@import "blocks/listing-swipe-block";
+
+
+@import "components/button";
+@import "components/form";

@@ -1,3 +1,4 @@
 import "bootstrap";
-import "./factsblock.js"
+import "./facts-block.js"
 import "./customer-story-listing-block";
+import "./collapseable";

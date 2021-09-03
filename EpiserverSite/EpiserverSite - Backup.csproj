@@ -98,18 +98,8 @@
     <Reference Include="EPiServer.Events, Version=11.15.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.Framework.11.15.1\lib\net461\EPiServer.Events.dll</HintPath>
     </Reference>
-    <Reference Include="EPiServer.Forms, Version=4.30.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7">
-      <HintPath>..\packages\EPiServer.Forms.4.30.3\lib\EPiServer.Forms.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
-    </Reference>
     <Reference Include="EPiServer.Forms.Core, Version=4.30.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7">
       <HintPath>..\packages\EPiServer.Forms.Core.4.30.3\lib\EPiServer.Forms.Core.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
-    </Reference>
-    <Reference Include="EPiServer.Forms.UI, Version=4.30.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7">
-      <HintPath>..\packages\EPiServer.Forms.UI.4.30.3\lib\EPiServer.Forms.UI.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
@@ -303,14 +293,12 @@
     <Compile Include="Business\PageContextActionFilter.cs" />
     <Compile Include="Business\PageViewContextFactory.cs" />
     <Compile Include="Business\Rendering\CustomContentAreaRenderer.cs" />
-    <Compile Include="Business\Rendering\IContainerPage.cs" />
     <Compile Include="Business\Rendering\SiteViewEngine.cs" />
     <Compile Include="Business\Rendering\TemplateCoordinator.cs" />
     <Compile Include="Business\ServiceLocatorDependencyResolver.cs" />
     <Compile Include="Business\ThemeDropDownSelectionFactory.cs" />
     <Compile Include="Controllers\ArticleListingPageController.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
-    <Compile Include="Controllers\FAQListingPageController.cs" />
     <Compile Include="Controllers\PageControllerBase.cs" />
     <Compile Include="Controllers\PreviewController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
@@ -336,14 +324,9 @@
     <Compile Include="Models\Pages\ArticleListingPage.cs" />
     <Compile Include="Models\Pages\ArticlePage.cs" />
     <Compile Include="Models\Pages\ContactPage.cs" />
-    <Compile Include="Models\Pages\ContainerPage.cs" />
-    <Compile Include="Models\Pages\ContainerPageBase.cs" />
-    <Compile Include="Models\Pages\FAQListingPage.cs" />
     <Compile Include="Models\Pages\FAQPage.cs" />
     <Compile Include="Models\Pages\ProductPage.cs" />
-    <Compile Include="Models\SiteContentType.cs" />
     <Compile Include="Models\ViewModels\ArticleListingPageViewModel.cs" />
-    <Compile Include="Models\ViewModels\FAQListingPageViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\SitePageData.cs" />
@@ -389,10 +372,6 @@
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\web.config" />
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\EPiServer.Cms.TinyMce.zip" />
     <Content Include="License.config" />
-    <None Include="modules\_protected\EPiServer.Forms.UI\EPiServer.Forms.UI.zip" />
-    <None Include="modules\_protected\EPiServer.Forms.UI\module.config" />
-    <None Include="modules\_protected\EPiServer.Forms\EPiServer.Forms.zip" />
-    <None Include="modules\_protected\EPiServer.Forms\Forms.config" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -402,7 +381,6 @@
     <Content Include="Views\ArticlePage\Index.cshtml" />
     <None Include="Views\ArticleListingPage\index.cshtml" />
     <None Include="Views\ContactPage\Index.cshtml" />
-    <None Include="Views\FAQListingPage\Index.cshtml" />
     <None Include="Views\ImageFile\Index.cshtml" />
     <None Include="Views\Preview\Index.cshtml" />
     <None Include="Views\Shared\Blocks\ContactPageBlock.cshtml" />
@@ -421,7 +399,6 @@
     <None Include="Views\Shared\PagePartials\ArticlePage.cshtml" />
     <None Include="Views\Shared\PagePartials\ArticlePageHorizontal.cshtml" />
     <None Include="Views\Shared\PagePartials\ArticlePageVertical.cshtml" />
-    <None Include="Views\Shared\PagePartials\FAQPage.cshtml" />
     <None Include="Views\Shared\_Breadcrumbs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

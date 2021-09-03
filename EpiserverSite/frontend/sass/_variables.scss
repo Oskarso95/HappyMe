@@ -2,9 +2,21 @@ $footer-bg-color: #595959;
 $footer-link-color: #9B9B9B;
 $footer-usp-bg-color: #EAF6FD;
 $btn-pink-color: #EC008C;
+$btn-pink-hover-color: darken(#EC008C, 30%);
 
-$theme-color-light-beige: #FEEEE0;
-$theme-color-light-pink: #FBE8F0;
-$theme-color-light-blue: #EAF6FD;
 
 $customer-stories-active-color: #A3DDF8;
+
+//icon theme background colors
+$theme-color-beige: #FEEEE0;
+$theme-color-pink: #FBE8F0;
+$theme-color-blue: #EAF6FD;
+$theme-color-green: lighten(#E2E999, 20%);
+$theme-color-orange: lighten(#FBBB86, 20%);
+
+//icon theme colors
+$icon-color-green: #E2E999;
+$icon-color-blue: #A3DDF8;
+$icon-color-pink: #F399C1;
+$icon-color-orange: #FBBB86;
+$icon-color-beige: darken(#FEEEE0, 20%);

@@ -1,0 +1,13 @@
+﻿@model EpiserverSite.Models.Blocks.ContactPageBlock
+<div class="contact-page-block">
+    <div class="contact-page-block__icon">
+        <i class="@Model.IconCssClass icon-10x"></i>
+    </div>
+    <hr/>
+    <div class="contact-page-block__header">
+        <h3 @Html.EditAttributes(x => x.Heading)>@Model.Heading</h3>
+    </div>
+    <div class="contact-page-block__content">
+        @Html.PropertyFor(x => x.Content)
+    </div>
+</div>

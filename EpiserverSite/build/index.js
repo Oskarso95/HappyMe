@@ -9,6 +9,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./frontend/js/collapseable.js":
+/*!*************************************!*\
+  !*** ./frontend/js/collapseable.js ***!
+  \*************************************/
+/***/ (() => {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  let collapseables = document.getElementsByClassName(\"collapseables\");\n\n  if (collapseables.length > 0 && collapseables != undefined) {\n    Array.from(collapseables).forEach(c => {\n      c.addEventListener(\"click\", showCollapseContent);\n    });\n  }\n});\n\nlet showCollapseContent = e => {\n  e.preventDefault();\n  let topLevelTag = e.target.parentNode.parentNode;\n  console.log(topLevelTag);\n  let collapseContent = topLevelTag.getElementsByClassName(\"collapseable-content\");\n\n  if (collapseContent != undefined && collapseContent.length > 0) {\n    if (collapseContent[0].classList.contains(\"d-none\")) {\n      collapseContent[0].classList.remove(\"d-none\");\n      collapseContent[0].classList.add(\"d-flex\");\n    } else if (collapseContent[0].classList.contains(\"d-flex\")) {\n      collapseContent[0].classList.add(\"d-none\");\n      collapseContent[0].classList.remove(\"d-flex\");\n    }\n  }\n};\n\n//# sourceURL=webpack://episerversite/./frontend/js/collapseable.js?");
+
+/***/ }),
+
 /***/ "./frontend/js/customer-story-listing-block.js":
 /*!*****************************************************!*\
   !*** ./frontend/js/customer-story-listing-block.js ***!
@@ -19,13 +29,13 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var story
 
 /***/ }),
 
-/***/ "./frontend/js/factsblock.js":
-/*!***********************************!*\
-  !*** ./frontend/js/factsblock.js ***!
-  \***********************************/
+/***/ "./frontend/js/facts-block.js":
+/*!************************************!*\
+  !*** ./frontend/js/facts-block.js ***!
+  \************************************/
 /***/ (() => {
 
-eval("document.addEventListener(\"DOMContentLoaded\", function () {});\n\n//# sourceURL=webpack://episerversite/./frontend/js/factsblock.js?");
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  let iconLeft = document.getElementById(\"iconLeft\");\n  let iconRight = document.getElementById(\"iconRight\");\n\n  if (iconLeft != undefined) {\n    iconLeft.addEventListener(\"click\", showColumn, false);\n  }\n\n  if (iconRight != undefined) {\n    iconRight.addEventListener(\"click\", showColumn, false);\n  }\n});\n\nlet showColumn = e => {\n  let id = e.target.id;\n  let targetColumn = id.split(/(?=[A-Z])/)[1].toLowerCase() + \"-column\";\n  let column = document.getElementsByClassName(targetColumn);\n  console.log(column);\n\n  if (column.length > 0) {\n    console.log(column[0]);\n  }\n};\n\n//# sourceURL=webpack://episerversite/./frontend/js/facts-block.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {});\n\n//# so
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _factsblock_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./factsblock.js */ \"./frontend/js/factsblock.js\");\n/* harmony import */ var _factsblock_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_factsblock_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./customer-story-listing-block */ \"./frontend/js/customer-story-listing-block.js\");\n/* harmony import */ var _customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack://episerversite/./frontend/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\n/* harmony import */ var _facts_block_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./facts-block.js */ \"./frontend/js/facts-block.js\");\n/* harmony import */ var _facts_block_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_facts_block_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./customer-story-listing-block */ \"./frontend/js/customer-story-listing-block.js\");\n/* harmony import */ var _customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_customer_story_listing_block__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _collapseable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapseable */ \"./frontend/js/collapseable.js\");\n/* harmony import */ var _collapseable__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_collapseable__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack://episerversite/./frontend/js/index.js?");
 
 /***/ }),
 

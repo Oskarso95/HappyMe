@@ -14,8 +14,8 @@ namespace EpiserverSite.Business.Rendering
         {
             var tag = GetContentAreaItemTemplateTag(helper, contentAreaItem);
 
-            return String.Format("Block {0} {1} {2}", GetTypeSpecificCssClasses(contentAreaItem, ContentRepository),
-                GetCssClassForTag(tag), tag);
+            return String.Format("Block {0} {1} {2} {3}", GetTypeSpecificCssClasses(contentAreaItem, ContentRepository),
+                GetCssClassForTag(tag), tag, helper.ViewContext.ViewData["childrencssclass"] as string);
         }
 
         public static string GetCssClassForTag(string tag)

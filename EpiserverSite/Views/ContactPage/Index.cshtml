@@ -1,0 +1,14 @@
+﻿@using EpiserverSite
+@model EpiserverSite.Models.ViewModels.PageViewModel<EpiserverSite.Models.Pages.ContactPage>
+
+<section class="contact-section">
+    <div class="contact-section__block">
+        @Html.PropertyFor(x => x.CurrentPage.LeftBlock, new {Tag = Global.ContentAreaTags.FullWidth})
+    </div>
+    <div class="contact-section__block">
+        @Html.PropertyFor(x => x.CurrentPage.MiddleBlock, new {Tag = Global.ContentAreaTags.FullWidth})
+    </div>
+    <div class="contact-section__block">
+        @Html.PropertyFor(x => x.CurrentPage.RightBlock, new {Tag = Global.ContentAreaTags.FullWidth})
+    </div>
+</section>

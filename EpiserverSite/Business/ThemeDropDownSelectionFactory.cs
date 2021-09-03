@@ -14,9 +14,11 @@ namespace EpiserverSite.Business
         {
             return new List<ISelectItem>
             {
-                new SelectItem {Text = "Light-pink", Value = "bg-light-pink"},
-                new SelectItem {Text = "Light-blue", Value = "bg-light-blue"},
-                new SelectItem {Text = "Light-beige", Value = "bg-light-beige"},
+                new SelectItem {Text = "Pink", Value = "theme-pink"},
+                new SelectItem {Text = "Blue", Value = "theme-blue"},
+                new SelectItem {Text = "Beige", Value = "theme-beige"},
+                new SelectItem {Text = "Orange", Value = "theme-orange"},
+                new SelectItem {Text = "Green", Value = "theme-green"},
             };
         }
     }

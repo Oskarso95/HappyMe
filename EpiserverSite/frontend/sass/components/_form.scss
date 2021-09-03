@@ -1,0 +1,44 @@
+.Form__Title {
+}
+.Form__Description {
+}
+
+.Form__MainBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  .FormStep {
+    width: 100%;
+    .FormTextbox,
+    .FormTextBox--Textarea {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      label {
+        width: 100%;
+        font-weight: 500;
+        text-align: left;
+      }
+      input,
+      textarea {
+        width: 100%;
+        margin: 10px 0;
+        padding: 7px;
+        &:focus {
+          outline: none !important;
+          border-color: $btn-pink-color;
+          box-shadow: 0 0 10px $btn-pink-color;
+        }
+      }
+      textarea {
+        height: 150px;
+      }
+    }
+  }
+  .FormSubmitButton {
+    @extend .button, .button-pink;
+  }
+}

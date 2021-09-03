@@ -3,14 +3,15 @@
 
 
 <div class="listing-swipe-block-container @(Model.CssClass)">
-    <div class="listing-swipe-block__header-container row">
+    <div class="listing-swipe-block__header">
         <h5 @Html.EditAttributes(x => x.Heading) class=" col-12 fw-bold display-6 text-center"> @Model.Heading </h5>
     </div>
-    @Html.PropertyFor(x => x.MainContent, new {Tag = Global.ContentAreaTags.FullWidth})
+
+    @Html.PropertyFor(x => x.MainContent, new {Tag = Global.ContentAreaTags.FullWidth, CssClass = "listing-swipe-block__content-wrapper", ChildrenCssClass = "listing-swipe-block__card"})
 
     @if (Model.Link != null)
     {
-        <div class="row">
+        <div class="listing-swipe-block__footer text-center">
             @Html.PropertyFor(x => x.Link, new {CssClass = "col-12"})
         </div>
     }

@@ -18,12 +18,11 @@ namespace EpiserverSite.Business.Rendering
 
         public static void OnTemplateResolved(object sender, TemplateResolverEventArgs args)
         {
-            //Disable DefaultPageController for page types that shouldn't have any renderer as pages
-            //if (args.ItemToRender is IContainerPage && args.SelectedTemplate != null &&
-            //    args.SelectedTemplate.TemplateType == typeof(DefaultPageController))
-            //{
-            //    args.SelectedTemplate = null;
-            //}
+            if (args.ItemToRender is IContainerPage && args.SelectedTemplate != null &&
+                args.SelectedTemplate.TemplateType == typeof(DefaultPageController))
+            {
+                args.SelectedTemplate = null;
+            }
         }
 
 
