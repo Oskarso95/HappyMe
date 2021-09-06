@@ -79,7 +79,7 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .FAQ-section .FAQ-block__content-header a, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .faq-section .faq-block__content-header a, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -104,11 +104,11 @@ h2, .h2 {
   }
 }
 
-h3, .FAQ-section .FAQ-block__content-header a, .h3 {
+h3, .faq-section .faq-block__content-header a, .h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 @media (min-width: 1200px) {
-  h3, .FAQ-section .FAQ-block__content-header a, .h3 {
+  h3, .faq-section .faq-block__content-header a, .h3 {
     font-size: 1.75rem;
   }
 }
@@ -10905,8 +10905,8 @@ body {
 .hero-container h2,
 .hero-container .h2,
 .hero-container h3,
-.hero-container .FAQ-section .FAQ-block__content-header a,
-.FAQ-section .FAQ-block__content-header .hero-container a,
+.hero-container .faq-section .faq-block__content-header a,
+.faq-section .faq-block__content-header .hero-container a,
 .hero-container .h3,
 .hero-container h4,
 .hero-container .h4,
@@ -10932,7 +10932,7 @@ a {
 .textimageblock h2, .textimageblock .h2 {
   font-size: 36px;
 }
-.textimageblock h3, .textimageblock .FAQ-section .FAQ-block__content-header a, .FAQ-section .FAQ-block__content-header .textimageblock a, .textimageblock .h3 {
+.textimageblock h3, .textimageblock .faq-section .faq-block__content-header a, .faq-section .faq-block__content-header .textimageblock a, .textimageblock .h3 {
   font-size: 30px;
 }
 .textimageblock p {
@@ -10944,7 +10944,7 @@ a {
   clip-path: polygon(0% 0%, 0% 97%, 48% 97%, 49% 100%, 50% 97%, 100% 97%, 100% 0%);
 }
 
-.main-content h1, .main-content .h1, .main-content h2, .main-content .h2, .main-content h3, .main-content .FAQ-section .FAQ-block__content-header a, .FAQ-section .FAQ-block__content-header .main-content a, .main-content .h3, .main-content h4, .main-content .h4, .main-content h5, .main-content .h5, .main-content p {
+.main-content h1, .main-content .h1, .main-content h2, .main-content .h2, .main-content h3, .main-content .faq-section .faq-block__content-header a, .faq-section .faq-block__content-header .main-content a, .main-content .h3, .main-content h4, .main-content .h4, .main-content h5, .main-content .h5, .main-content p {
   color: black;
 }
 
@@ -11030,37 +11030,40 @@ a {
   text-align: left;
 }
 
-.FAQ-section {
+.faq-section {
   width: 100%;
 }
-.FAQ-section .FAQ-block {
+.faq-section .faq__items {
+  width: 100%;
+}
+.faq-section .faq-block {
   width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
-.FAQ-section .FAQ-block i {
+.faq-section .faq-block i {
   margin-bottom: 6%;
 }
-.FAQ-section .FAQ-block__body {
+.faq-section .faq-block__body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-.FAQ-section .FAQ-block__content-wrapper {
+.faq-section .faq-block__content-wrapper {
   width: 100%;
   min-height: 150px;
 }
-.FAQ-section .FAQ-block__content-header {
+.faq-section .faq-block__content-header {
   border-bottom: 1px solid grey;
   cursor: pointer;
   text-decoration: none;
 }
-.FAQ-section .FAQ-block__content-header a:hover {
+.faq-section .faq-block__content-header a:hover {
   color: black;
 }
-.FAQ-section .FAQ-block__content-body {
+.faq-section .faq-block__content-body {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11068,7 +11071,7 @@ a {
   height: 100%;
   padding: 10px 0;
 }
-.FAQ-section .FAQ-block__content-body h5, .FAQ-section .FAQ-block__content-body .h5 {
+.faq-section .faq-block__content-body h5, .faq-section .faq-block__content-body .h5 {
   align-self: flex-start;
   width: 50%;
   margin-right: 40px;
@@ -11230,18 +11233,27 @@ a {
   flex: 4;
 }
 
-.factsblock__banner {
-  height: 132px;
+.factsblock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.factsblock__banner .factsblock__icon-container {
+.factsblock__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.factsblock__header .arrow {
   position: relative;
-  height: 132px;
+  width: 25%;
 }
-.factsblock__banner .factsblock__icon-container i {
+.factsblock__header .arrow .factsblock__icon {
   cursor: pointer;
-  font-size: 90px;
 }
-.factsblock__banner .factsblock__icon-container i:after {
+.factsblock__header .arrow .factsblock__icon:after {
   content: "";
   width: 0;
   height: 0;
@@ -11254,7 +11266,57 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+.factsblock__columns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.factsblock__columns .right {
+  justify-content: flex-start !important;
+}
+.factsblock__columns .factsblock__column-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 100px;
+}
+.factsblock__columns .factsblock__column-wrapper .factsblock__column {
+  text-align: center;
+}
+.factsblock__heading {
+  font-size: 40px;
+  width: 100px;
+}
 
+@media screen and (min-width: 769px) {
+  .factsblock__column-wrapper {
+    width: 50%;
+  }
+  .factsblock__column-wrapper .factsblock__column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .factsblock__header {
+    flex-wrap: wrap;
+  }
+  .factsblock__header .factsblock__heading {
+    width: 100% !important;
+    order: -1 !important;
+    flex-basis: 100%;
+  }
+
+  .factsblock__columns {
+    flex-basis: 100%;
+  }
+  .factsblock__columns .factsblock__column-wrapper {
+    width: 100%;
+  }
+  .factsblock__columns .factsblock__column-wrapper .factsblock__column {
+    width: 100%;
+  }
+}
 .listingswipeblock .listing-swipe-block-container .listing-swipe-block__header {
   padding: 20px 0;
 }
@@ -11449,19 +11511,9 @@ a {
 /*.icon-frukt_smak_orange:before { content: '\e816'; } /* '' */
 /*.icon-frukt_smak_pink:before { content: '\e817'; } /* '' */
 
-.icon-get_in_touch_blue:before {
+.icon-get_in_touch:before {
   content: "\e818";
 }
-.icon-get_in_touch_green:before {
-  content: "\e819";
-}
-.icon-get_in_touch_orange:before {
-  content: "\e81a";
-}
-.icon-get_in_touch_pink:before {
-  content: "\e81b";
-}
-
 .icon-health_benefits:before {
   content: "\e81c";
 }
@@ -11590,9 +11642,8 @@ a {
 /* .icon-ordering_payment_blue:before {
   content: "\e84d";
 }
-.icon-ordering_payment:before {
-  content: "\e84e";
-}
+
+
 .icon-ordering_payment_green:before {
   content: "\e84f";
 }
@@ -11604,6 +11655,9 @@ a {
 } */
 .icon-practical_info:before {
   content: "\e852";
+}
+.icon-ordering_payment:before {
+  content: "\e84e";
 }
 /* .icon-practical_info_blue:before {
   content: "\e853";

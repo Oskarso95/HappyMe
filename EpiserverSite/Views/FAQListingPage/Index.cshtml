@@ -1,15 +1,16 @@
 ﻿@model EpiserverSite.Models.ViewModels.FAQListingPageViewModel
-<section class="FAQ-section">
+<section class="faq-section">
 
     @if (Model.FAQPages.Any())
     {
-        foreach (var FAQPage in Model.FAQPages)
-        {
-
+        <dl class="faq__items">
+            @foreach (var FAQPage in Model.FAQPages)
             {
-                Html.RenderPartial("PagePartials/FAQPage", FAQPage);
+                {
+                    Html.RenderPartial("PagePartials/FAQPage", FAQPage);
+                }
             }
-        }
+        </dl>
     }
 
 </section>

@@ -27,7 +27,18 @@ namespace EpiserverSite.Models.Blocks
             GroupName = SystemTabNames.Content,
             Order = 200)]
         [SelectOne(SelectionFactoryType = typeof(ThemeDropDownSelectionFactory))]
-        public virtual string IconThemeClass { get; set; }
+        public virtual string ThemeCssClass { get; set; }
+
+        [ScaffoldColumn(false)]
+        public virtual string IconThemeCssClass
+        {
+            get
+            {
+                var theme = this.GetPropertyValue(x => x.ThemeCssClass);
+                return theme + "-icon";
+            }
+            set { this.SetPropertyValue(x => x.IconThemeCssClass, value); }
+        }
 
         [CultureSpecific]
         [Display(

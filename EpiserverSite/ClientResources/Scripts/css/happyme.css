@@ -98,6 +98,9 @@
 .icon-info:before {
   content: "\e826";
 }
+.icon-ordering_payment:before {
+  content: "\e84e";
+}
 
 .icon-ingen_binding:before {
   content: "\e82b";

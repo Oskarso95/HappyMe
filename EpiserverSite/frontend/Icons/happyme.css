@@ -102,19 +102,9 @@
 /*.icon-frukt_smak_orange:before { content: '\e816'; } /* '' */
 /*.icon-frukt_smak_pink:before { content: '\e817'; } /* '' */
 
-.icon-get_in_touch_blue:before {
+.icon-get_in_touch:before {
   content: "\e818";
 }
-.icon-get_in_touch_green:before {
-  content: "\e819";
-}
-.icon-get_in_touch_orange:before {
-  content: "\e81a";
-}
-.icon-get_in_touch_pink:before {
-  content: "\e81b";
-}
-
 .icon-health_benefits:before {
   content: "\e81c";
 }
@@ -243,9 +233,8 @@
 /* .icon-ordering_payment_blue:before {
   content: "\e84d";
 }
-.icon-ordering_payment:before {
-  content: "\e84e";
-}
+
+
 .icon-ordering_payment_green:before {
   content: "\e84f";
 }
@@ -257,6 +246,9 @@
 } */
 .icon-practical_info:before {
   content: "\e852";
+}
+.icon-ordering_payment:before {
+  content: "\e84e";
 }
 /* .icon-practical_info_blue:before {
   content: "\e853";

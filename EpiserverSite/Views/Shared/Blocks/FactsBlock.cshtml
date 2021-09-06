@@ -2,7 +2,7 @@
 @using EpiserverSite
 @model EpiserverSite.Models.Blocks.FactsBlock
 
-<div class="w-100 row factsblock-container justify-content-center">
+@*<div class="w-100 row factsblock-container justify-content-center">
     <div class="col-12 factsblock__banner-container @(!string.IsNullOrWhiteSpace(Model.Theme) ? Model.Theme : "")">
         <div class="factsblock__banner w-100 d-flex align-items-center justify-content-center">
             <div class="w-25 factsblock__icon-container">
@@ -19,4 +19,24 @@
     @Html.PropertyFor(x => x.LeftColumn, new {Tag = Global.ContentAreaTags.HalfWidth, CssClass = "css", ChildrenCssClass = "left-column"})
     <div class="spacer w-10"></div>
     @Html.PropertyFor(x => x.RightColumn, new {Tag = Global.ContentAreaTags.HalfWidth, CssClass = "css", ChildrenCssClass = "right-column"})
+</div>*@
+
+<div class="factsblock__header @Model.Theme">
+    <div class="arrow">
+        <i id="icon-left" class="@Model.LeftColumn.IconCssClass @Model.IconThemeCssClass icon-7x factsblock__icon"></i>
+    </div>
+
+    <h3 @Html.EditAttributes(x => x.Heading) class="factsblock__heading">@Model.Heading</h3>
+    <div class="arrow">
+        <i id="icon-right" class="@Model.RightColumn.IconCssClass @Model.IconThemeCssClass icon-7x factsblock__icon"></i>
+    </div>
+</div>
+<div class="factsblock__columns">
+    <div class="factsblock__column-wrapper left d-md-flex">
+        @Html.PropertyFor(x => x.LeftColumn)
+    </div>
+
+    <div class="factsblock__column-wrapper right d-none d-md-flex">
+        @Html.PropertyFor(x => x.RightColumn)
+    </div>
 </div>

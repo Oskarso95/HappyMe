@@ -1,31 +1,89 @@
-.factsblock__banner {
-  height: 132px;
-  .factsblock__icon-container {
-    position: relative;
-    height: 132px;
-    i {
-      cursor:pointer;
-      font-size: 90px;
-      &:after {
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: solid 8px transparent;
-        border-bottom: solid 8px white;
-        border-left: solid 29px transparent;
-        border-right: solid 29px transparent;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+.factsblock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      position: relative;
+      width: 25%;
+      .factsblock__icon {
+        cursor: pointer;
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: solid 8px transparent;
+          border-bottom: solid 8px white;
+          border-left: solid 29px transparent;
+          border-right: solid 29px transparent;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .right {
+      justify-content: flex-start !important; //push right content towards the middle!
+    }
+    .factsblock__column-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 100px;
+
+      .factsblock__column {
+        text-align: center;
+      }
+    }
+  }
+  &__heading {
+    font-size: 40px;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .factsblock__column-wrapper {
+    width: 50%;
+    .factsblock__column {
+      width: 50%;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
 
+  .factsblock__header{
+    flex-wrap: wrap;
+    .factsblock__heading{
+      width: 100% !important;
+      order: -1 !important;
+      flex-basis: 100%;
+    }
+  }
 
-    
-
+  .factsblock__columns{
+    flex-basis: 100%;
+    .factsblock__column-wrapper {    
+      width: 100%; 
+      .factsblock__column {
+        width: 100%;
+      }
+    }
+  }
 }
